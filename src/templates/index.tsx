@@ -14,7 +14,7 @@ import Header, { Link } from "../components/header";
 import Footer from "../components/footer";
 import Cta from "../components/cta";
 import Contact from "../components/contact";
-import List from "../components/list";
+import { Link } from "@yext/sites-react-components";
 import Hours from "../components/hours";
 import StaticMap from "../components/static-map";
 import "../index.css";
@@ -112,6 +112,7 @@ const Index: Default<Data> = (data) => {
     geocodedCoordinate,
     services,
   } = streamOutput;
+  console.log("out: ", document)
 
   const links: Link[] = [
     {
