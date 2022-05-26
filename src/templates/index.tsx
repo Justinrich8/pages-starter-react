@@ -110,6 +110,7 @@ const Index: Default<Data> = (data) => {
     hours,
     mainPhone,
     geocodedCoordinate,
+    mainPhone,
     services,
   } = streamOutput;
   console.log("out: ", document)
@@ -167,10 +168,9 @@ const Index: Default<Data> = (data) => {
             </div>
           </div>
         </div>
-        <Footer></Footer>
-      </div>
-    </>
-  );
+      </>
+    }
+  />
 };
 
 export default Index;

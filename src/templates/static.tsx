@@ -65,11 +65,18 @@ const Static: Default<PokemonData> = (data) => {
   const [num, setNum] = useState<number>(0);
 
   return (
-    <>
-      <div>Hello from {name}</div>
-      <button onClick={() => setNum(num + 1)}>Click me</button>
-      Num: {num}
-    </>
+    <CommonLayout
+      // TODO(bhaines): we're missing _site data on static pages so this doesn't work
+      // https://yext.slack.com/archives/C02LLE9BW2K/p1653582254686619
+      streamOutput={{_site: {c_header: []}}}
+      content={
+        <>
+          <div>Hello from {name}</div>
+          <button onClick={() => setNum(num + 1)}>Click me</button>
+          Num: {num}
+        </>
+      }
+    />
   );
 };
 
