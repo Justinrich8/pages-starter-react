@@ -3,7 +3,7 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 
 interface LayoutProps {
-	streamOutput: any // TODO: fix ataype
+	streamOutput: any // TODO: fix type
 	content: React.ReactElement
 }
 
