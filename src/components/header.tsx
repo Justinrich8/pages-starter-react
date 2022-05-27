@@ -38,7 +38,7 @@ const Header = (props: HeaderProps) => {
     <nav className="py-6 flex items-center justify-between">
       <img src={logo} width="50" height="50"></img>
       <div className="text-2xl font-semibold">
-        Yext&apos;s Fashion Warehouse
+        Essilor
       </div>
       <div className="">{renderLinks(topLinks)}</div>
       <div className="">{renderLinks(links)}</div>

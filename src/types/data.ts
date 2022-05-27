@@ -6,13 +6,22 @@ export type Data = {
   __meta: {};
 };
 
-interface Core {
+export type Card<P> = (props: {profile: P}) => React.Element | null;
+
+interface Hero {
 	background: Image
 	cTA1: CTA
 	cTA2: CTA
 }
 
+export interface FAQ {
+  name: string
+  // TODO(bhaines): how to handle rich text type
+  answer: string
+}
+
 export interface Profile {
+	id: string
 	name: string
 	description: string
 	logo: Image
@@ -25,7 +34,7 @@ export interface Profile {
 	photoGallery: Image[]
 	nearby?: Profile[]
   c_alertBanner: string
-  c_core: Core
+  c_hero: Hero
 	_site: any
 } 
 

@@ -173,7 +173,8 @@ const Index: Default<Data> = (data) => {
                 ></StaticMap>
               )}
             </div>
-            <FAQs faqs={c_faqs} image={c_faqImage} />
+            <Nearby Card={LocationCard} />
+            <FAQs faqs={c_faqs} image={c_faqImage} Card={FAQCard}/>
           </>
         }
       />

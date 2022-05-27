@@ -29,6 +29,9 @@ export function Hero(props: HeroProps) {
               {props.address.line1}
             </div>
             <div>
+              {props.address.line2}
+            </div>
+            <div>
               <span>{props.address.city}</span>, <span>{props.address.region}</span>
             </div>
             <div>

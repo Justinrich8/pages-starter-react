@@ -1,0 +1,21 @@
+.LocationCard {
+  position: relative;
+  margin: 13px 0;
+}
+
+.LocationCard::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 11px;
+  top: 13px;
+  width: 100%;
+  height: 100%;
+  background-color: #0086d6;
+  transition: all .3s ease;
+}
+
+.LocationCard:hover::after {
+  left: 0;
+  top: 0;
+}

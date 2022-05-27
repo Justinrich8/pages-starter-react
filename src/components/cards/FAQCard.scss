@@ -1,0 +1,11 @@
+.FAQ {
+  svg {
+    transition: all 0.3s linear;
+  }
+}
+
+.FAQ.is-expanded {
+  svg {
+    transform: rotate(180deg);
+  }
+}

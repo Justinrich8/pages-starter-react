@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import logo from "../assets/images/experts.png";
 
 interface LayoutProps {
 	streamOutput: any // TODO: fix type
@@ -14,7 +15,7 @@ export default function CommonLayout(props: LayoutProps) {
 		<>
       <div className="centered-container">
 				<Header 
-					logo="https://cdn.fs.brandfolder.com/cache=expiry:604800/deY3VGFpSjC761Abjbfc"
+					logo={logo}
 					topLinks={_site.c_headerTopRow}
 					links={_site.c_header}
 				/>
