@@ -45,13 +45,13 @@ export function Hero(props: HeroProps) {
           </div>
 
           <div className="flex justify-between">
-            <Link link={props.cTA1.link} type={props.cTA2.linkType}>
+            {props.cTA1 && <Link link={props.cTA1.link} type={props.cTA2.linkType}>
               {props.cTA1.label}
-            </Link>
+            </Link>}
 
-            <Link link={props.cTA2.link} type={props.cTA2.linkType}>
+            {props.cTA2 && <Link link={props.cTA2.link} type={props.cTA2.linkType}>
               {props.cTA2.label}
-            </Link>
+            </Link>}
           </div>
         </div>
       </div>
