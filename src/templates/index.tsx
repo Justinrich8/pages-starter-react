@@ -46,6 +46,11 @@ export const config: TemplateConfig = {
       "slug",
       "geocodedCoordinate",
       "services",
+      "c_alertBanner",
+      "c_hero",
+      "c_faqs.name",
+      "c_faqs.answer",
+      "c_faqImage"
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
@@ -106,12 +111,14 @@ const Index: Default<Data> = (data) => {
   const {
     name,
     address,
-    openTime,
     hours,
     mainPhone,
     geocodedCoordinate,
     mainPhone,
     services,
+    c_hero,
+    c_faqs,
+    c_faqImage,
   } = streamOutput;
   console.log("out: ", document)
 
@@ -166,11 +173,11 @@ const Index: Default<Data> = (data) => {
                 ></StaticMap>
               )}
             </div>
-          </div>
-        </div>
-      </>
-    }
-  />
+            <FAQs faqs={c_faqs} image={c_faqImage} />
+          </>
+        }
+      />
+    </ProfileProvider>
 };
 
 export default Index;

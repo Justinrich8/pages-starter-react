@@ -1,0 +1,17 @@
+.FAQs {
+  display: grid;
+  grid-template-columns: minmax(auto, max-content) 1fr;
+  gap: 30px;
+}
+
+.FAQ {
+  svg {
+    transition: all 0.3s linear;
+  }
+}
+
+.FAQ.is-expanded {
+  svg {
+    transform: rotate(180deg);
+  }
+}
