@@ -10,13 +10,15 @@ export interface FAQsProps {
 }
 
 export function FAQs(props: FAQsProps) {
+  const {faqs = []} = props;
+
   return (
     <div className="FAQs centered-container">
       <img src={props.image.url} alt="" />
       <div>
         <div>Frequently Asked Questions</div>
         <div>
-          {props.faqs.map(faq => <props.Card key={faq.name} profile={faq} />)}
+          {faqs.map(faq => <props.Card key={faq.name} profile={faq} />)}
         </div>
       </div>
     </div>
