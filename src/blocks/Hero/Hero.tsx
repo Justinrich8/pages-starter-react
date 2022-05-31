@@ -15,7 +15,7 @@ export function Hero(props: HeroProps) {
   return (
     <div className="Hero bg-brand-blue">
       <div className="Hero-imgWrapper">
-        <img className="Hero-img" src={props.background.url} alt="" />
+        {props.background?.url && <img className="Hero-img" src={props.background.url} alt="" />}
       </div>
       <div className="container mx-auto flex justify-start items-center">
         <div className="Hero-info bg-white p-4">

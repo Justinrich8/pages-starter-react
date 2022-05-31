@@ -14,7 +14,7 @@ export function FAQs(props: FAQsProps) {
 
   return (
     <div className="FAQs centered-container">
-      <img src={props.image.url} alt="" />
+      {props.image?.url && <img src={props.image.url} alt="" />}
       <div>
         <div className="my-4 font-bold">Frequently Asked Questions</div>
         <ul>
