@@ -1,16 +1,17 @@
+import React from "react";
 import { Link } from "@yext/sites-react-components";
 import { Address, CTA, Hours, LinkType } from "@yext/types";
-import React from "react";
+import If from "../../components/If";
 
 export interface CoreProps {
 	title: string
-	description: string
+	description?: string
 	infoTitle?: string
 	hoursTitle?: string
-	hours: Hours
+	hours?: Hours
 	address: Address
-	phone: string
-	cta: CTA
+	phone?: string
+	cta?: CTA
 	// listings: Listing TODO(bhaines): figure out listings
 }
 
@@ -25,9 +26,11 @@ export function Core(props: CoreProps) {
 					<div className="mb-4">
 						{description}
 					</div>
-					<Link className="Button Button--primary Button--loose" link={cta.link}>
-						{cta.label}
-					</Link>
+					{cta && 
+						<Link className="Button Button--primary Button--loose" link={cta.link}>
+							{cta.label}
+						</Link>
+					}
 				</div>
 				<div className="grid sm:grid-cols-1 md:grid-cols-2">
 					<div>

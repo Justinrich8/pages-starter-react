@@ -9,35 +9,34 @@ export type Data = {
 export type Card<P> = (props: {profile: P}) => React.Element | null;
 
 interface Hero {
-	name: string
-	background: Image
-	cTA1: CTA
-	cTA2: CTA
+	name?: string
+	background?: Image
+	cTA1?: CTA
+	cTA2?: CTA
 }
 
 export interface FAQ {
   name: string
   // TODO(bhaines): how to handle rich text type
-  answer: string
+  answer?: string
 }
 
 export interface Profile {
 	id: string
 	name: string
-	description: string
-	logo: Image
+	description?: string
+	logo?: Image
 	address: Address
-	openTime: string
-	hours: Hours
-	mainPhone: string
-	geocodedCoordinate: Coordinate
-	services: string[]
-	photoGallery: Image[]
-	nearby?: Profile[]
-  c_alertBanner: string
-  c_hero: Hero
-	c_faqs: FAQ[]
-	c_faqImage: Image
+	openTime?: string
+	hours?: Hours
+	mainPhone?: string
+	geocodedCoordinate?: Coordinate
+	services?: string[]
+	photoGallery?: Image[]
+  c_alertBanner?: string
+  c_hero?: Hero
+	c_faqs?: FAQ[]
+	c_faqImage?: Image
 	_site: any
 } 
 

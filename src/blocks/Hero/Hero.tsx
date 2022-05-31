@@ -4,11 +4,11 @@ import { Address, CTA, Image } from "@yext/types";
 import "./Hero.scss";
 
 export interface HeroProps {
-  name: string
+  name?: string
   address: Address
-  background: Image
-  cTA1: CTA
-  cTA2: CTA
+  background?: Image
+  cTA1?: CTA
+  cTA2?: CTA
 }
 
 export function Hero(props: HeroProps) {
@@ -19,9 +19,9 @@ export function Hero(props: HeroProps) {
       </div>
       <div className="container mx-auto flex justify-start items-center">
         <div className="Hero-info bg-white p-4">
-          <div>
+          {props.name && <div>
             {props.name}
-          </div>
+          </div>}
 
           {/* TODO(bhaines): use address component when it exists */}
           <div>
@@ -45,7 +45,7 @@ export function Hero(props: HeroProps) {
           </div>
 
           <div className="flex justify-between">
-            {props.cTA1 && <Link className="Button Button--primary" {...props.cTA1}>
+            {props.cTA1 && <Link className="Button Button--primary" link={props.cTA1.link} type={props.cTA1.linkType}>
               {props.cTA1.label}
             </Link>}
 

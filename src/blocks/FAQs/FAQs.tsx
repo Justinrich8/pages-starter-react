@@ -1,16 +1,18 @@
 import React from "react";
 import { Image } from "@yext/types";
 import "./FAQs.scss"
-import { Card, FAQ } from "../types/data";
+import { Card, FAQ } from "../../types/data";
 
 export interface FAQsProps {
-  faqs: FAQ[]
-  image: Image
+  faqs?: FAQ[]
+  image?: Image
   Card: Card<FAQ>
 }
 
 export function FAQs(props: FAQsProps) {
   const {faqs = []} = props;
+
+  if (!faqs.length) return null;
 
   return (
     <div className="FAQs centered-container">
