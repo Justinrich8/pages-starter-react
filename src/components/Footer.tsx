@@ -22,27 +22,33 @@ function currentYear() {
 
 const Footer = (props: FooterProps) => {
   const socialLinks = [
-    {link: props.facebook, label: <FaFacebook color="white" />},
-    {link: props.twitter, label: <FaTwitter color="white" />},
-    {link: props.youtube, label: <FaYoutube color="white" />},
-    {link: props.instagram, label: <FaInstagram color="white" />},
-    {link: props.linkedIn, label: <FaLinkedinIn color="white" />},
+    {link: props.facebook, label: <FaFacebook size={28} color="white" />},
+    {link: props.twitter, label: <FaTwitter size={28} color="white" />},
+    {link: props.youtube, label: <FaYoutube size={28} color="white" />},
+    {link: props.instagram, label: <FaInstagram size={28} color="white" />},
+    {link: props.linkedIn, label: <FaLinkedinIn size={28} color="white" />},
   ].filter(x => x.link)
 >>>>>>> 5ff9812 (feat: add page sections)
 
   return (
-    <footer className="bg-blue-500 text-white">
-      <div className="flex justify-center items-center">
-        {socialLinks.map(link => <Link className="p-4" key={link.link} link={link.link}>{link.label}</Link>)}
+    <footer className="bg-blue-500">
+      <div className="centered-container text-white">
+        <div className="flex justify-center items-center">
+          {socialLinks.map(link => <Link className="p-4" key={link.link} link={link.link}>{link.label}</Link>)}
+        </div>
+        <div className="flex">
+          {props.links1.map(link => <Link className="p-4" key={link.link} link={link.link}>{link.label}</Link>)}
+        </div>
       </div>
-      <div>
-        {props.links1.map(link => <Link className="p-4" key={link.link} link={link.link}>{link.label}</Link>)}
-      </div>
-      <div>
-        {props.links2.map(link => <Link className="p-4" key={link.link} link={link.link}>{link.label}</Link>)}
-      </div>
-      <div className="w-full px-8 mt-4 rounded-b-lg bg-blueGray-50">
-        ©2017-{currentYear()} ESSILOR OF AMERICA, INC. ALL RIGHTS RESERVED.
+      <div className="bg-[#dbdada]">
+        <div className="centered-container">
+          <div className="flex">
+            {props.links2.map(link => <Link className="p-4" key={link.link} link={link.link}>{link.label}</Link>)}
+          </div>
+          <div className="w-full">
+            ©2017-{currentYear()} ESSILOR OF AMERICA, INC. ALL RIGHTS RESERVED.
+          </div>
+        </div>
       </div>
     </footer>
   );
