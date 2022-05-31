@@ -476,10 +476,10 @@
   "resolved" "https://registry.npmjs.org/@yext/types/-/types-0.1.4-alpha.tgz"
   "version" "0.1.4-alpha"
 
-"@yext/vite-plugin-yext-sites-ssg@^0.0.7":
-  "integrity" "sha512-9lnAg0n+hoJAms7poxtD+iXSE9erKyazeAut0QJBwsrlWSJO8Nv2Kcz1Xov/7ABgg9EQFQ6nYua9oAZr4nReYw=="
-  "resolved" "https://registry.npmjs.org/@yext/vite-plugin-yext-sites-ssg/-/vite-plugin-yext-sites-ssg-0.0.7.tgz"
-  "version" "0.0.7"
+"@yext/vite-plugin-yext-sites-ssg@^0.0.6":
+  "integrity" "sha512-8ja8cfl8AtbfVrh7qHVEfxvGLDxHzWDQRUrHiiRvcVpF2b4yOrXmYMbiEre9hVfw+o0J3B7hAfG/hKPdr1zW1Q=="
+  "resolved" "https://registry.npmjs.org/@yext/vite-plugin-yext-sites-ssg/-/vite-plugin-yext-sites-ssg-0.0.6.tgz"
+  "version" "0.0.6"
   dependencies:
     "chalk" "^5.0.0"
     "fs-extra" "^10.0.1"
@@ -489,12 +489,12 @@
     "pretty-ms" "^7.0.1"
     "rollup" "^2.72.1"
 
-"@yext/yext-sites-scripts@0.0.18":
-  "integrity" "sha512-6jurJAcuDmPgxCueyaxJ+KlYFS1DUucSGxZBVRP28wceT5dp14dyg5UINvmV38T6AfiMGHBpUH9GAau++XmYMQ=="
-  "resolved" "https://registry.npmjs.org/@yext/yext-sites-scripts/-/yext-sites-scripts-0.0.18.tgz"
-  "version" "0.0.18"
+"@yext/yext-sites-scripts@0.0.17":
+  "integrity" "sha512-ndpziYNkUIAHeutxgWMXx9boe2oDgUZ3WP8jxm2jgZtaC2fzzttbgAW265xQtzrpQVGf4ggNxzFofS8bmkUj5A=="
+  "resolved" "https://registry.npmjs.org/@yext/yext-sites-scripts/-/yext-sites-scripts-0.0.17.tgz"
+  "version" "0.0.17"
   dependencies:
-    "@yext/vite-plugin-yext-sites-ssg" "^0.0.7"
+    "@yext/vite-plugin-yext-sites-ssg" "^0.0.6"
     "ansi-to-html" "^0.7.2"
     "cli-spinners" "^2.6.1"
     "commander" "^9.1.0"
