@@ -21,11 +21,11 @@ export function Core(props: CoreProps) {
 		<div className="Core centered-container">
 			<div>{title}</div>
 			<div className="grid sm:grid-cols-1 md:grid-cols-2">
-				<div>
-					<div>
+				<div className="flex flex-col items-start justify-start">
+					<div className="mb-4">
 						{description}
 					</div>
-					<Link link={cta.link}>
+					<Link className="Button Button--primary Button--loose" link={cta.link}>
 						{cta.label}
 					</Link>
 				</div>
@@ -46,7 +46,7 @@ export function Core(props: CoreProps) {
 						</div>
 						<div>
 							{/* TODO(bhaines): use getDirections component */}
-							<Link link="https://www.yext.com">
+							<Link className="Link Link--primary Link--arrow" link="https://www.yext.com">
 								Get Directions
 							</Link>
 						</div>

@@ -31,7 +31,7 @@ const Footer = (props: FooterProps) => {
 >>>>>>> 5ff9812 (feat: add page sections)
 
   return (
-    <footer className="bg-blue-500">
+    <footer className="bg-brand-blue">
       <div className="centered-container text-white">
         <div className="flex justify-center items-center">
           {socialLinks.map(link => <Link className="p-4" key={link.link} link={link.link}>{link.label}</Link>)}

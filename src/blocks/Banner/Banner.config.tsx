@@ -3,8 +3,8 @@
 // types of your component's props
 
 import { Banner, BannerProps } from "./Banner"
-import withConfiguration from "../withConfiguration";
-import { Profile } from "../types/data"
+import withConfiguration from "../../withConfiguration";
+import { Profile } from "../../types/data"
 
 function alertBannerConfig(profile: Profile): BannerProps {
 	const { c_alertBanner } = profile;

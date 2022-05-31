@@ -2,23 +2,18 @@
 // of this file with a default config object based on the
 // types of your component's props
 
-import { Core, CoreProps } from "./Core"
-import withConfiguration from "../withConfiguration";
-import { Profile } from "../types/data"
+import { FAQs, FAQsProps } from "./FAQs"
+import withConfiguration from "../../withConfiguration";
+import { Profile } from "../../types/data"
+import FAQCard from "../../components/cards/FAQCard";
 
-function coreConfig(profile: Profile): CoreProps {
-	const { name, description, mainPhone, hours, address } = profile;
+function faqsConfig(profile: Profile): FAQsProps {
+	const { c_faqImage, c_faqs } = profile;
 
 	return {
-		title: `About ${name}`,
-		description,
-		hours,
-		address,
-		phone: mainPhone,
-		cta: {
-			link: "https://www.essilorusa.com",
-			label: "essilorusa.com",
-		}
+		image: c_faqImage,
+		faqs: c_faqs,
+		Card: FAQCard,
 	}
 }
 
@@ -26,6 +21,6 @@ function coreConfig(profile: Profile): CoreProps {
 // If we want to use multiple version of this component configured in different ways
 // we would export multiple of these with different usePropsForRender functions
 // We can think of a way to do that without needing code changes if we think it'll be common
-const BasicCore = withConfiguration(Core, coreConfig)
+const ConfiguredFAQs = withConfiguration(FAQs, faqsConfig)
 
-export { BasicCore } 
+export { ConfiguredFAQs as FAQs } 

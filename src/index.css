@@ -1,6 +1,17 @@
+@import "./styles/Button.scss";
+/* @import "./styles/Link.scss"; */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  --brand-blue: #0086D6;
+  --brand-blueSecondary: #085FA2;
+  --brand-green: #36A296;
+  --brand-greenSecondary: #297D74;
+  --gray1: #dbdada;
+}
 
 .centered-container {
   @apply mx-auto px-5 md:px-14 max-w-screen-xl;

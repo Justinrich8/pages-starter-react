@@ -1,0 +1,17 @@
+.Link.Link--primary {
+	color: theme('colors.brand-blue');
+}
+
+.Link.Link--arrow {
+	&::after {
+		position: relative;
+		content: url('/src/assets/images/arrow.svg');
+		margin-left: 12px;
+		left: 0;
+		transition: left .3s ease;
+	}
+
+	&:hover::after {
+		left: 8px;
+	}
+}

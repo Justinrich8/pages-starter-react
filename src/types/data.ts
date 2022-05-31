@@ -9,6 +9,7 @@ export type Data = {
 export type Card<P> = (props: {profile: P}) => React.Element | null;
 
 interface Hero {
+	name: string
 	background: Image
 	cTA1: CTA
 	cTA2: CTA
@@ -35,6 +36,8 @@ export interface Profile {
 	nearby?: Profile[]
   c_alertBanner: string
   c_hero: Hero
+	c_faqs: FAQ[]
+	c_faqImage: Image
 	_site: any
 } 
 

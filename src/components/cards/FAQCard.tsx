@@ -15,10 +15,10 @@ export default function FAQCard(props: {profile: FAQ}) {
   return (
     <div className={`FAQ ${classes} flex flex-col`}>
       <button className="flex items-center justify-between w-full" {...getToggleProps()}>
-        {props.profile.name} <FaChevronDown color="blue" />
+        {props.profile.name} <FaChevronDown />
       </button>
       <div {...getCollapseProps()}>
-        <div>
+        <div className="mt-2">
           {props.profile.answer}
         </div>
       </div>

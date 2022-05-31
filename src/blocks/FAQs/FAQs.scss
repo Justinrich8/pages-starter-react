@@ -1,0 +1,13 @@
+.FAQs {
+  display: grid;
+  grid-template-columns: minmax(auto, max-content) 1fr;
+  gap: 30px;
+
+  &-item {
+    border-bottom: 1px solid theme('colors.gray1');
+  }
+
+  &-item:first-child {
+    border-top: 1px solid theme('colors.gray1');
+  }
+}

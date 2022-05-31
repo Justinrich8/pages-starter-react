@@ -7,7 +7,7 @@ import { LinkType } from "@yext/types";
 export default function LocationCard(props: {profile: Profile}) {
   const {name, address, mainPhone} = props.profile;
   return (
-    <div className="LocationCard bg-white p-4 border border-blue-500">
+    <div className="LocationCard bg-white p-4 border border-brand-blue">
     <div>
       {name}
     </div>
@@ -31,7 +31,7 @@ export default function LocationCard(props: {profile: Profile}) {
     </div>
 
     <div className="flex justify-between">
-      <Link link={mainPhone} type={"Phone"}>
+      <Link className="Button Button--primary" link={mainPhone} type={"Phone"}>
         Call Now
       </Link>
     </div>

@@ -13,7 +13,7 @@ export interface HeroProps {
 
 export function Hero(props: HeroProps) {
   return (
-    <div className="Hero bg-blue-500">
+    <div className="Hero bg-brand-blue">
       <div className="Hero-imgWrapper">
         <img className="Hero-img" src={props.background.url} alt="" />
       </div>
@@ -45,11 +45,11 @@ export function Hero(props: HeroProps) {
           </div>
 
           <div className="flex justify-between">
-            {props.cTA1 && <Link link={props.cTA1.link} type={props.cTA2.linkType}>
+            {props.cTA1 && <Link className="Button Button--primary" {...props.cTA1}>
               {props.cTA1.label}
             </Link>}
 
-            {props.cTA2 && <Link link={props.cTA2.link} type={props.cTA2.linkType}>
+            {props.cTA2 && <Link className="Button Button--secondary" link={props.cTA2.link} type={props.cTA2.linkType}>
               {props.cTA2.label}
             </Link>}
           </div>

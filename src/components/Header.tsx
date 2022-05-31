@@ -33,12 +33,12 @@ const Header = (props: HeaderProps) => {
 
   return (
     <nav className="Header">
-      <div className="Header-top bg-[#dbdada]">
+      <div className="Header-top bg-gray1">
         <div className="centered-container">
           <div className="flex items-center justify-end">{renderLinks(topLinks)}</div>
         </div>
       </div>
-      <div className="bg-blue-500">
+      <div className="bg-brand-blue">
         <div className="Header-bottom centered-container relative flex justify-between items-center">
           <img className="Header-logo left-0" src={logo} width="72" height="72"></img>
           <div className="flex items-center justify-end text-white">{renderLinks(links)}</div>

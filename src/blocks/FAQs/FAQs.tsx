@@ -16,10 +16,12 @@ export function FAQs(props: FAQsProps) {
     <div className="FAQs centered-container">
       <img src={props.image.url} alt="" />
       <div>
-        <div>Frequently Asked Questions</div>
-        <div>
-          {faqs.map(faq => <props.Card key={faq.name} profile={faq} />)}
-        </div>
+        <div className="my-4 font-bold">Frequently Asked Questions</div>
+        <ul>
+          {faqs.map(faq => <li className="FAQs-item py-4" key={faq.name}>
+            <props.Card key={faq.name} profile={faq} />
+            </li>)}
+        </ul>
       </div>
     </div>
   )
