@@ -1,7 +1,10 @@
+import { Link } from "@yext/sites-react-components";
 import React, { useEffect, useState } from "react";
+import { H2 } from "../../components/Heading";
 import { Card, Profile, useProfile } from "../../types/data";
 
 export interface NearbyProps {
+  heading: string
   Card: Card<Profile>
   apiKey: string
   entityTypes?: string[]
@@ -32,8 +35,12 @@ export function Nearby(props: NearbyProps) {
 
 
   return (
-    <div className="Nearby centered-container">
-      <div className="grid grid-cols-3 gap-4">
+    <div className="Nearby container">
+      <div className="flex justify-between">
+        <H2>{props.heading}</H2>
+        <Link className="Button Button--primary" link="https://www.yext.com">Find a Location</Link>
+      </div>
+      <div className="grid gap-4 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {nearbyLocs.map(loc => <props.Card key={loc.name} profile={loc} />)}
       </div>
     </div>

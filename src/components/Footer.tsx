@@ -31,23 +31,27 @@ const Footer = (props: FooterProps) => {
 >>>>>>> 5ff9812 (feat: add page sections)
 
   return (
-    <footer className="bg-brand-blue">
-      <div className="centered-container text-white">
-        <div className="flex justify-center items-center">
-          {socialLinks.map(link => <Link className="p-4" key={link.link} link={link.link}>{link.label}</Link>)}
-        </div>
-        <div className="flex">
-          {props.links1.map(link => <Link className="p-4" key={link.link} link={link.link}>{link.label}</Link>)}
+    <footer>
+      <div className="bg-brand-blue py-11">
+        <div className="container text-white">
+          <div className="flex justify-center items-center">
+            {socialLinks.map(link => <Link className="Link p-4" key={link.link} link={link.link}>{link.label}</Link>)}
+          </div>
+          <div className="flex flex-col sm:flex-row items-center">
+            {props.links1.map(link => <Link className="Link py-4 sm:px-4" key={link.link} link={link.link}>{link.label}</Link>)}
+          </div>
         </div>
       </div>
-      <div className="bg-[#dbdada]">
-        <div className="centered-container">
-          <div className="flex">
-            {props.links2.map(link => <Link className="p-4" key={link.link} link={link.link}>{link.label}</Link>)}
+      <div className="bg-gray1">
+        <div className="container">
+          <div className="flex flex-col sm:flex-row items-center">
+            {props.links2.map(link => <Link className="Link py-4 sm:px-4" key={link.link} link={link.link}>{link.label}</Link>)}
           </div>
-          <div className="w-full">
-            ©2017-{currentYear()} ESSILOR OF AMERICA, INC. ALL RIGHTS RESERVED.
-          </div>
+        </div>
+      </div>
+      <div className="container">
+        <div className="w-full bg-white">
+          ©2017-{currentYear()} ESSILOR OF AMERICA, INC. ALL RIGHTS RESERVED.
         </div>
       </div>
     </footer>

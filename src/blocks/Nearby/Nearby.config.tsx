@@ -9,6 +9,7 @@ import LocationCard from "../../components/cards/LocationCard";
 
 function config(profile: Profile): NearbyProps {
 	return {
+		heading: "Nearby Essilor Experts",
 		apiKey: 'ae79e8eb05e10f03917d3f4836863ac7',
 		Card: LocationCard,
 	}

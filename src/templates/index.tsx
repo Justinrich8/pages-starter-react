@@ -176,6 +176,7 @@ const Index: Default<Data> = (data) => {
 
 						<Nearby />
             <FAQs />
+						<Nearby />
           </>
         }
       />

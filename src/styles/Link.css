@@ -1,3 +1,7 @@
+.Link {
+	font-weight: theme('fontWeight.bold')
+}
+
 .Link.Link--primary {
 	color: theme('colors.brand-blue');
 }

@@ -365,6 +365,11 @@
   "resolved" "https://registry.npmjs.org/@types/scheduler/-/scheduler-0.16.2.tgz"
   "version" "0.16.2"
 
+"@types/tailwindcss@^3.0.10":
+  "integrity" "sha512-1UnZIHO0NOPyPlPFV0HuMjki2SHkvG9uBA1ZehWj/OQMSROk503nuNyyfmJSIT289yewxTbKoPG+KLxYRvfIIg=="
+  "resolved" "https://registry.npmjs.org/@types/tailwindcss/-/tailwindcss-3.0.10.tgz"
+  "version" "3.0.10"
+
 "@types/yoga-layout@1.9.2":
   "integrity" "sha512-S9q47ByT2pPvD65IvrWp7qppVMpk9WGMbVq9wbWZOHg6tnXSD4vyhao6nOSBwwfDdV2p3Kx9evA9vI+XWTfDvw=="
   "resolved" "https://registry.npmjs.org/@types/yoga-layout/-/yoga-layout-1.9.2.tgz"
@@ -2607,7 +2612,7 @@
   "resolved" "https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz"
   "version" "4.2.0"
 
-"postcss@^8.1.0", "postcss@^8.2.14", "postcss@^8.3.3", "postcss@^8.4.12", "postcss@^8.4.13", "postcss@>=8.0.9":
+"postcss@^8.1.0", "postcss@^8.2.14", "postcss@^8.3.3", "postcss@^8.4.12", "postcss@^8.4.13", "postcss@^8.4.14", "postcss@>=8.0.9":
   "integrity" "sha512-E398TUmfAYFPBSdzgeieK2Y1+1cpdxJx8yXbK/m57nRhKSmk1GB2tO4lbLBtlkfPQTDKfe4Xqv1ASWPpayPEig=="
   "resolved" "https://registry.npmjs.org/postcss/-/postcss-8.4.14.tgz"
   "version" "8.4.14"
@@ -2905,7 +2910,7 @@
   "resolved" "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz"
   "version" "2.1.2"
 
-"sass@*", "sass@^1.52.1":
+"sass@*":
   "integrity" "sha512-fSzYTbr7z8oQnVJ3Acp9hV80dM1fkMN7mSD/25mpcct9F7FPBMOI8krEYALgU1aZoqGhQNhTPsuSmxjnIvAm4Q=="
   "resolved" "https://registry.npmjs.org/sass/-/sass-1.52.1.tgz"
   "version" "1.52.1"

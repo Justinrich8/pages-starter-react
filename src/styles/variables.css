@@ -1,0 +1,9 @@
+// TODO(bhaines): is there a point to having these or should we just define them
+// in the tailwind config directly
+html {
+  --brand-blue: rgb(0,134,214);
+  --brand-blueSecondary: rgb(8,95,162);
+  --brand-green: rgb(54,162,150);
+  --brand-greenSecondary: rgb(41,125,116);
+  --gray1: rgb(219,218,218);
+}

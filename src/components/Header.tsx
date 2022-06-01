@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from "@yext/sites-react-components";
 import { CTA } from "@yext/types";
-import "./Header.scss"
+import "./Header.css"
 
 export type Link = {
   label: string;
@@ -34,12 +34,12 @@ const Header = (props: HeaderProps) => {
   return (
     <nav className="Header">
       <div className="Header-top bg-gray1">
-        <div className="centered-container">
+        <div className="container">
           <div className="flex items-center justify-end">{renderLinks(topLinks)}</div>
         </div>
       </div>
       <div className="bg-brand-blue">
-        <div className="Header-bottom centered-container relative flex justify-between items-center">
+        <div className="Header-bottom container relative flex justify-between items-center">
           <img className="Header-logo left-0" src={logo} width="72" height="72"></img>
           <div className="flex items-center justify-end text-white">{renderLinks(links)}</div>
         </div>

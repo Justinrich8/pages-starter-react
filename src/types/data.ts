@@ -30,7 +30,7 @@ export interface Profile {
 	openTime?: string
 	hours?: Hours
 	mainPhone?: string
-	geocodedCoordinate?: Coordinate
+	geocodedCoordinate: Coordinate
 	services?: string[]
 	photoGallery?: Image[]
   c_alertBanner?: string

@@ -9,10 +9,10 @@ export function Banner(props: BannerProps) {
 	if (!props.content) return null;
 
 	return (
-		<div className="Banner bg-brand-blue text-white p-4">
-			<div className="centered-container">
-				<div className="flex items-center">
-					<FaInfo className="m-4" /> {props.content}
+		<div className="Banner bg-brand-blueSecondary text-white py-4">
+			<div className="container">
+				<div className="flex items-start sm:items-center">
+					<FaInfo className="m-4 flex-shrink-0" /> {props.content}
 				</div>
 			</div>
 		</div>
