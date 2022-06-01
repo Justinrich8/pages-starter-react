@@ -1,5 +1,5 @@
-// TODO(bhaines): is there a point to having these or should we just define them
-// in the tailwind config directly
+/* TODO(bhaines): is there a point to having these or should we just define them
+in the tailwind config directly */
 html {
   --brand-blue: rgb(0,134,214);
   --brand-blueSecondary: rgb(8,95,162);
