@@ -4,7 +4,7 @@ import * as React from "react";
 import { Link } from "@yext/sites-react-components";
 import { CTA } from "@yext/types";
 import React from "react";
-import { FaFacebook, FaInstagram, FaLinkedin, FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
 
 interface FooterProps {
   instagram: URL
@@ -31,26 +31,26 @@ const Footer = (props: FooterProps) => {
 >>>>>>> 5ff9812 (feat: add page sections)
 
   return (
-    <footer>
+    <footer className="text-sm sm:text-xs">
       <div className="bg-brand-blue py-11">
         <div className="container text-white">
           <div className="flex justify-center items-center">
             {socialLinks.map(link => <Link className="Link p-4" key={link.link} link={link.link}>{link.label}</Link>)}
           </div>
-          <div className="flex flex-col sm:flex-row items-center">
+          <div className="flex flex-col sm:flex-row items-center justify-center">
             {props.links1.map(link => <Link className="Link py-4 sm:px-4" key={link.link} link={link.link}>{link.label}</Link>)}
           </div>
         </div>
       </div>
       <div className="bg-gray1">
         <div className="container">
-          <div className="flex flex-col sm:flex-row items-center">
+          <div className="flex flex-col sm:flex-row items-center justify-center">
             {props.links2.map(link => <Link className="Link py-4 sm:px-4" key={link.link} link={link.link}>{link.label}</Link>)}
           </div>
         </div>
       </div>
       <div className="container">
-        <div className="w-full bg-white">
+        <div className="w-full bg-white text-center p-3">
           ©2017-{currentYear()} ESSILOR OF AMERICA, INC. ALL RIGHTS RESERVED.
         </div>
       </div>
