@@ -40,7 +40,8 @@ export const config = {
       "dm_directoryChildrenCount",
       "dm_directoryChildren.slug",
       "dm_directoryChildren.name",
-      "dm_directoryParents",
+      "dm_directoryParents.name",
+      "dm_directoryParents.slug",
       "slug",
     ],
     // Defines the scope of entities that qualify for this stream.

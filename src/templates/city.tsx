@@ -16,6 +16,7 @@ import CommonLayout from "../layouts/Common";
 import { H1 } from "../components/Heading";
 import LocationCard from "../components/cards/LocationCard";
 import "../index.css";
+import { Breadcrumbs } from "@yext/sites-react-components";
 
 /**
  * Required when Knowledge Graph data is used for a template.
@@ -43,7 +44,8 @@ export const config = {
       "dm_directoryChildren.name",
       "dm_directoryChildren.address",
       "dm_directoryChildren.mainPhone",
-      "dm_directoryParents",
+      "dm_directoryParents.slug",
+      "dm_directoryParents.name",
       "slug",
     ],
     // Defines the scope of entities that qualify for this stream.
@@ -81,6 +83,7 @@ const City: React.FC<Data> = (props) => {
   const { document } = props;
   const { streamOutput } = document;
   const {dm_directoryChildrenCount, dm_directoryChildren, name} = streamOutput;
+  console.log("doc: ", document);
   return <ProfileProvider value={streamOutput} >
         <CommonLayout 
         streamOutput={streamOutput}

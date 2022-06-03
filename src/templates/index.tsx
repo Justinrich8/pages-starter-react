@@ -50,7 +50,9 @@ export const config: TemplateConfig = {
       "c_hero",
       "c_faqs.name",
       "c_faqs.answer",
-      "c_faqImage"
+      "c_faqImage",
+      "dm_directoryParents.name",
+      "dm_directoryParents.slug"
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {

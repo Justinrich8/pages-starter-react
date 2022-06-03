@@ -1,13 +1,13 @@
 import React from "react";
-import { Link } from "@yext/sites-react-components";
-import { Address, CTA, Image } from "@yext/types";
+import { Image, Link } from "@yext/sites-react-components";
+import { Address, CTA, Image as ImageType } from "@yext/types";
 import "./Hero.css";
 import { Heading } from "../../components/Heading";
 
 export interface HeroProps {
   name?: string
   address: Address
-  background?: Image
+  background?: ImageType
   cTA1?: CTA
   cTA2?: CTA
 }
@@ -16,7 +16,7 @@ export function Hero(props: HeroProps) {
   return (
     <div className="Hero bg-transparent sm:bg-brand-blue">
       <div className="Hero-imgWrapper">
-        {props.background?.url && <img className="Hero-img" src={props.background.url} alt="" />}
+        {props.background && <Image className="Hero-img" imageField={props.background} />}
       </div>
       <div className="container mx-auto flex justify-start items-center z-10">
         <div className="Hero-info w-full sm:w-auto text-center sm:text-left bg-white py-8 sm:px-8">

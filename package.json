@@ -14,7 +14,7 @@
     "node": ">=17"
   },
   "dependencies": {
-    "@yext/sites-react-components": "^0.0.2-alpha",
+    "@yext/sites-react-components": "^0.0.6-alpha",
     "@yext/types": "^0.1.4-alpha",
     "@yext/yext-sites-scripts": "0.0.22",
     "classnames": "^2.3.1",
@@ -39,6 +39,7 @@
     "eslint-plugin-react": "^7.29.4",
     "pokenode-ts": "^1.13.1",
     "postcss": "^8.4.14",
+    "postcss-mixins": "^9.0.2",
     "prettier": "^2.6.2",
     "tailwindcss": "^3.0.23"
   }

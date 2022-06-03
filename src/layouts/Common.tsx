@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import logo from "../assets/images/logo.svg";
+import { Breadcrumbs } from "@yext/sites-react-components";
 
 interface LayoutProps {
 	streamOutput: any // TODO: fix type
@@ -10,6 +11,7 @@ interface LayoutProps {
 
 export default function CommonLayout(props: LayoutProps) {
 	const { _site } = props.streamOutput;
+	console.log("output: ", props.streamOutput)
 
 	return (
 		<>
@@ -18,6 +20,9 @@ export default function CommonLayout(props: LayoutProps) {
 				topLinks={_site.c_headerTopRow}
 				links={_site.c_header}
 			/>
+			<div className="container flex">
+				{props.streamOutput?.dm_directoryParents?.length > 0 && <Breadcrumbs streamsBreadcrumbs={props.streamOutput} />}
+			</div>
 			<div>
 				{props.content}
 			</div>

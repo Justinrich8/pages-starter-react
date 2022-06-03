@@ -469,10 +469,10 @@
     "react-refresh" "^0.13.0"
     "resolve" "^1.22.0"
 
-"@yext/sites-react-components@^0.0.2-alpha":
-  "integrity" "sha512-SNjyKZ818D1yrRf3+QAuH1a36AuPTET1uea1acAbiWvQlX1HI2TyOtMAWoyJ4lwAsDLyfWBsT1THWWj54fFW0g=="
-  "resolved" "https://registry.npmjs.org/@yext/sites-react-components/-/sites-react-components-0.0.2-alpha.tgz"
-  "version" "0.0.2-alpha"
+"@yext/sites-react-components@^0.0.6-alpha":
+  "integrity" "sha512-msQNswWd5SnoysFehUV4t2ATeGOfjk4RFU0T+SYiHeTB0w8FUGoTtm+sRUspXoqGLqDjBQrMA78sGwjrblPPTQ=="
+  "resolved" "https://registry.npmjs.org/@yext/sites-react-components/-/sites-react-components-0.0.6-alpha.tgz"
+  "version" "0.0.6-alpha"
   dependencies:
     "awesome-phonenumber" "^2.70.0"
 
@@ -2592,6 +2592,16 @@
     "lilconfig" "^2.0.5"
     "yaml" "^1.10.2"
 
+"postcss-mixins@^9.0.2":
+  "integrity" "sha512-LaFjXcR+7LRji+Sc6DRn1mUw43+Y9Lyh5JjFTQDedlIi4W6REAesRXRJLlms5424vb0zerBfCVZzS2ZHRxGZOA=="
+  "resolved" "https://registry.npmjs.org/postcss-mixins/-/postcss-mixins-9.0.2.tgz"
+  "version" "9.0.2"
+  dependencies:
+    "fast-glob" "^3.2.11"
+    "postcss-js" "^4.0.0"
+    "postcss-simple-vars" "^6.0.3"
+    "sugarss" "^4.0.1"
+
 "postcss-nested@5.0.6":
   "integrity" "sha512-rKqm2Fk0KbA8Vt3AdGN0FB9OBOMDVajMG6ZCf/GoHgdxUJ4sBFp0A/uMIRm+MJUdo33YXEtjqIz8u7DAp8B7DA=="
   "resolved" "https://registry.npmjs.org/postcss-nested/-/postcss-nested-5.0.6.tgz"
@@ -2607,12 +2617,17 @@
     "cssesc" "^3.0.0"
     "util-deprecate" "^1.0.2"
 
+"postcss-simple-vars@^6.0.3":
+  "integrity" "sha512-fkNn4Zio8vN4vIig9IFdb8lVlxWnYR769RgvxCM6YWlFKie/nQaOcaMMMFz/s4gsfHW4/5bJW+i57zD67mQU7g=="
+  "resolved" "https://registry.npmjs.org/postcss-simple-vars/-/postcss-simple-vars-6.0.3.tgz"
+  "version" "6.0.3"
+
 "postcss-value-parser@^4.2.0":
   "integrity" "sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ=="
   "resolved" "https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz"
   "version" "4.2.0"
 
-"postcss@^8.1.0", "postcss@^8.2.14", "postcss@^8.3.3", "postcss@^8.4.12", "postcss@^8.4.13", "postcss@^8.4.14", "postcss@>=8.0.9":
+"postcss@^8.1.0", "postcss@^8.2.1", "postcss@^8.2.14", "postcss@^8.3.3", "postcss@^8.4.12", "postcss@^8.4.13", "postcss@^8.4.14", "postcss@>=8.0.9":
   "integrity" "sha512-E398TUmfAYFPBSdzgeieK2Y1+1cpdxJx8yXbK/m57nRhKSmk1GB2tO4lbLBtlkfPQTDKfe4Xqv1ASWPpayPEig=="
   "resolved" "https://registry.npmjs.org/postcss/-/postcss-8.4.14.tgz"
   "version" "8.4.14"
@@ -3137,6 +3152,11 @@
   "integrity" "sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig=="
   "resolved" "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-3.1.1.tgz"
   "version" "3.1.1"
+
+"sugarss@^4.0.1":
+  "integrity" "sha512-WCjS5NfuVJjkQzK10s8WOBY+hhDxxNt/N6ZaGwxFZ+wN3/lKKFSaaKUNecULcTTvE4urLcKaZFQD8vO0mOZujw=="
+  "resolved" "https://registry.npmjs.org/sugarss/-/sugarss-4.0.1.tgz"
+  "version" "4.0.1"
 
 "supports-color@^5.3.0":
   "integrity" "sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow=="

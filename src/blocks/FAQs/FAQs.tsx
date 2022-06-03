@@ -1,13 +1,14 @@
 import React from "react";
-import { Image } from "@yext/types";
+import { Image as ImageType } from "@yext/types";
 import { Card, FAQ } from "../../types/data";
 import { H2 } from "../../components/Heading";
+import { Image } from "@yext/sites-react-components";
 import { useBreakpoint } from "../../hooks/useBreakpoints";
 import "./FAQs.css"
 
 export interface FAQsProps {
   faqs?: FAQ[]
-  image?: Image
+  image?: ImageType
   Card: Card<FAQ>
 }
 
@@ -22,7 +23,7 @@ export function FAQs(props: FAQsProps) {
 
   return (
     <div className="FAQs container">
-      {isDesktop && props.image?.url && <img src={props.image.url} alt="" />}
+      {isDesktop && props.image && <Image imageField={props.image} />}
       <div>
         <H2 className="my-4">Frequently Asked Questions</H2>
         <ul className="text-left">

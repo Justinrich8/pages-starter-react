@@ -1,9 +1,17 @@
-.Link {
+@define-mixin Link {
 	font-weight: theme('fontWeight.bold')
 }
 
-.Link.Link--primary {
+@define-mixin Link--primary {
 	color: theme('colors.brand-blue');
+}
+
+.Link {
+	@mixin Link;
+}
+
+.Link.Link--primary {
+	@mixin Link--primary;
 }
 
 .Link.Link--arrow {

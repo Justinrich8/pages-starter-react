@@ -1,5 +1,5 @@
-import * as React from "react";
-import { Link } from "@yext/sites-react-components";
+import React from "react";
+import { Image, Link } from "@yext/sites-react-components";
 import { CTA } from "@yext/types";
 import "./Header.css"
 import { useBreakpoint } from "../hooks/useBreakpoints";
@@ -29,7 +29,7 @@ const Header = (props: HeaderProps) => {
       <nav className="Header">
         <div className="flex justify-start items-center bg-brand-blue py-2">
           <div className="container">
-            <img className="Header-logo" src={logo} /></div>
+            <Image className="Header-logo" src={logo} /></div>
         </div>
       </nav>
     )
@@ -54,7 +54,7 @@ const Header = (props: HeaderProps) => {
       </div>
       <div className="bg-brand-blue">
         <div className="Header-bottom container relative flex justify-between items-center">
-          <img className="Header-logo left-0" src={logo} />
+          <Image className="Header-logo left-0" src={logo} />
           <div className="flex items-center justify-end text-white">{renderLinks(links)}</div>
         </div>
       </div>
