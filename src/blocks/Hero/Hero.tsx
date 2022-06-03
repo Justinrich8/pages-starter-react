@@ -20,6 +20,11 @@ export function Hero(props: HeroProps) {
       </div>
       <div className="container mx-auto flex justify-start items-center z-10">
         <div className="Hero-info w-full sm:w-auto text-center sm:text-left bg-white py-8 sm:px-8">
+          {props.name ? 
+            <Heading className="mb-1" level={1} variants={['2']}>
+              {props.name}
+            </Heading> 
+          : null}
           {props.name && <Heading className="mb-1" level={1} variants={['2']}>
             {props.name}
           </Heading>}
