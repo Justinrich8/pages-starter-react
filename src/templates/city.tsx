@@ -13,9 +13,9 @@ import { reactWrapper } from "../wrapper";
 import { renderToString } from "react-dom/server";
 import { Data, ProfileProvider } from "../types/data";
 import CommonLayout from "../layouts/Common";
-import "../index.css";
 import { H1 } from "../components/Heading";
 import LocationCard from "../components/cards/LocationCard";
+import "../index.css";
 
 /**
  * Required when Knowledge Graph data is used for a template.

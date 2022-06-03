@@ -77,7 +77,6 @@ const Country: React.FC<Data> = (props) => {
   const { document } = props;
   const { streamOutput } = document;
   const {dm_directoryChildrenCount, dm_directoryChildren} = streamOutput;
-  console.log("Children: ", dm_directoryChildren)
   return <ProfileProvider value={streamOutput} >
         <CommonLayout 
         streamOutput={streamOutput}
