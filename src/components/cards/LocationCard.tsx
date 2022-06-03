@@ -10,7 +10,7 @@ export default function LocationCard(props: {profile: Profile}) {
     <div className="LocationCard u-dropShadowActive bg-white px-6 py-8 border border-brand-blue">
     <H3 className="mb-4">
       {slug 
-        ? <Link className="Link" link={`/${slug}`} linkType={"URL"}>{name}</Link>
+        ? <Link className="Link" link={slug} linkType={"URL"}>{name}</Link>
         : {name}
       }
     </H3>
