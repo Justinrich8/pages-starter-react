@@ -5,11 +5,14 @@ import { H3 } from "../Heading";
 import "./LocationCard.css";
 
 export default function LocationCard(props: {profile: Profile}) {
-  const {name, address, mainPhone} = props.profile;
+  const {name, address, mainPhone, slug} = props.profile;
   return (
     <div className="LocationCard u-dropShadowActive bg-white px-6 py-8 border border-brand-blue">
     <H3 className="mb-4">
-      {name}
+      {slug 
+        ? <Link className="Link" link={`/${slug}`} linkType={"URL"}>{name}</Link>
+        : {name}
+      }
     </H3>
 
     {/* TODO(bhaines): use hours component when it exists */}

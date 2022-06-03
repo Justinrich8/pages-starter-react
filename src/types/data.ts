@@ -35,6 +35,7 @@ export interface Profile {
 	photoGallery?: Image[]
   c_alertBanner?: string
   c_hero?: Hero
+	slug?: string
 	c_faqs?: FAQ[]
 	c_faqImage?: Image
 	_site: any
