@@ -13,7 +13,7 @@ export interface GlobalComponentProps {
 
 export default function withConfiguration<P>(Component: React.ComponentType<P>, useProvider: Provider<P & GlobalComponentProps>) {
   function Comp(props: PropsWithChildren<Record<string, never>>) {
-		const profile = useProfile(profile => profile);
+    const profile = useProfile(profile => profile);
     const providedProps = useProvider(profile)
     useEffect(() => {
       if (providedProps.useEffect) providedProps.useEffect()
