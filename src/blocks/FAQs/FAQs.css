@@ -1,17 +1,17 @@
 .FAQs {
   display: grid;
   grid-template-columns: 1fr;
-  gap: theme('spacing.8');
+  gap: theme("spacing.8");
 
   @screen sm {
     grid-template-columns: minmax(auto, max-content) 1fr;
   }
 
   &-item {
-    border-bottom: 1px solid theme('colors.gray1');
+    border-bottom: 1px solid theme("colors.gray1");
   }
 
   &-item:first-child {
-    border-top: 1px solid theme('colors.gray1');
+    border-top: 1px solid theme("colors.gray1");
   }
 }

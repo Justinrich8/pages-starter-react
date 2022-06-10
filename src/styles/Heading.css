@@ -1,18 +1,18 @@
 .Heading {
-	font-weight: theme('fontWeight.bold');
+  font-weight: theme("fontWeight.bold");
 }
 
 .Heading.Heading--1 {
-	font-size: 30px;
-	line-height: 36px;
+  font-size: 30px;
+  line-height: 36px;
 }
 
 .Heading.Heading--2 {
-	font-size: 25px;
-	line-height: 29px;
+  font-size: 25px;
+  line-height: 29px;
 }
 
 .Heading.Heading--3 {
-	font-size: 20px;
-	line-height: 24px;
+  font-size: 20px;
+  line-height: 24px;
 }

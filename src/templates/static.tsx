@@ -68,7 +68,19 @@ const Static: Default<PokemonData> = (data) => {
     <CommonLayout
       // TODO(bhaines): we're missing _site data on static pages so this doesn't work
       // https://yext.slack.com/archives/C02LLE9BW2K/p1653582254686619
-      streamOutput={{_site: {c_header: [], c_headerTopRow: [], c_facebook: "", c_instagram: "", c_youtube: "", c_linkedIn: "", c_twitter: "", c_footerLinks1: [], c_footerLinks2: []}}}
+      streamOutput={{
+        _site: {
+          c_header: [],
+          c_headerTopRow: [],
+          c_facebook: "",
+          c_instagram: "",
+          c_youtube: "",
+          c_linkedIn: "",
+          c_twitter: "",
+          c_footerLinks1: [],
+          c_footerLinks2: [],
+        },
+      }}
       content={
         <>
           <div>Hello from {name}</div>

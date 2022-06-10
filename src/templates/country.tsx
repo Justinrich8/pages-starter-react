@@ -76,12 +76,13 @@ export const getPath = (data: Data) => {
 const Country: React.FC<Data> = (props) => {
   const { document } = props;
   const { streamOutput } = document;
-  const {dm_directoryChildrenCount, dm_directoryChildren} = streamOutput;
-  return <ProfileProvider value={streamOutput} >
-        <CommonLayout 
+  const { dm_directoryChildrenCount, dm_directoryChildren } = streamOutput;
+  return (
+    <ProfileProvider value={streamOutput}>
+      <CommonLayout
         streamOutput={streamOutput}
         content={
-          <BasicDirectory 
+          <BasicDirectory
             count={dm_directoryChildrenCount}
             directoryChildren={dm_directoryChildren}
             name="the United States"
@@ -89,6 +90,7 @@ const Country: React.FC<Data> = (props) => {
         }
       />
     </ProfileProvider>
+  );
 };
 
 /**
@@ -100,6 +102,11 @@ const Country: React.FC<Data> = (props) => {
  * NOTE: Future changes may impact how this is used.
  */
 export const render = (data: Data) =>
-  reactWrapper(data, "country.tsx", renderToString(<Country {...data} />), true);
+  reactWrapper(
+    data,
+    "country.tsx",
+    renderToString(<Country {...data} />),
+    true
+  );
 
 export default Country;

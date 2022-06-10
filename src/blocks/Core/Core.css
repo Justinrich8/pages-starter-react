@@ -1,11 +1,11 @@
 .Core {
-	&-grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: theme('spacing.7');
+  &-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: theme("spacing.7");
 
-		@screen sm {
-			grid-template-columns: 2fr 1fr 1fr;
-		}
-	}
+    @screen sm {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+  }
 }

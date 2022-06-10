@@ -78,12 +78,14 @@ export const getPath = (data: Data) => {
 const State: React.FC<Data> = (props) => {
   const { document } = props;
   const { streamOutput } = document;
-  const {name, dm_directoryChildrenCount, dm_directoryChildren} = streamOutput;
-  return <ProfileProvider value={streamOutput} >
-        <CommonLayout 
+  const { name, dm_directoryChildrenCount, dm_directoryChildren } =
+    streamOutput;
+  return (
+    <ProfileProvider value={streamOutput}>
+      <CommonLayout
         streamOutput={streamOutput}
         content={
-          <BasicDirectory 
+          <BasicDirectory
             count={dm_directoryChildrenCount}
             directoryChildren={dm_directoryChildren}
             name={name}
@@ -91,6 +93,7 @@ const State: React.FC<Data> = (props) => {
         }
       />
     </ProfileProvider>
+  );
 };
 
 /**

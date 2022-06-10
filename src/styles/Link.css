@@ -1,29 +1,29 @@
 @define-mixin Link {
-	font-weight: theme('fontWeight.bold')
+  font-weight: theme("fontWeight.bold");
 }
 
 @define-mixin Link--primary {
-	color: theme('colors.brand-blue');
+  color: theme("colors.brand-blue");
 }
 
 .Link {
-	@mixin Link;
+  @mixin Link;
 }
 
 .Link.Link--primary {
-	@mixin Link--primary;
+  @mixin Link--primary;
 }
 
 .Link.Link--arrow {
-	&::after {
-		position: relative;
-		content: url('/src/assets/images/arrow.svg');
-		margin-left: 12px;
-		left: 0;
-		transition: left .3s ease;
-	}
+  &::after {
+    position: relative;
+    content: url("/src/assets/images/arrow.svg");
+    margin-left: 12px;
+    left: 0;
+    transition: left 0.3s ease;
+  }
 
-	&:hover::after {
-		left: 8px;
-	}
+  &:hover::after {
+    left: 8px;
+  }
 }

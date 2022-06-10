@@ -52,7 +52,7 @@ export const config: TemplateConfig = {
       "c_faqs.answer",
       "c_faqImage",
       "dm_directoryParents.name",
-      "dm_directoryParents.slug"
+      "dm_directoryParents.slug",
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
@@ -178,11 +178,12 @@ const Index: Default<Data> = (data) => {
 
 						<Nearby />
             <FAQs />
-						<Nearby />
+            <Nearby />
           </>
         }
       />
     </ProfileProvider>
+  );
 };
 
 export default Index;

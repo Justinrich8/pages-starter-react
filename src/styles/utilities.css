@@ -1,21 +1,21 @@
 .u-dropShadowActive,
 .u-dropShadow {
-	position: relative;
+  position: relative;
 
-	&::before {
-		content: "";
-		position: absolute;
-		z-index: -1;
-		left: 11px;
-		top: 13px;
-		width: 100%;
-		height: 100%;
-		background-color: theme('colors.brand-blue');
-		transition: all .3s ease;
-	}
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 11px;
+    top: 13px;
+    width: 100%;
+    height: 100%;
+    background-color: theme("colors.brand-blue");
+    transition: all 0.3s ease;
+  }
 }
 
 .u-dropShadowActive:hover::before {
-	left: 0;
-	top: 0;
+  left: 0;
+  top: 0;
 }

@@ -1,17 +1,17 @@
 .Breadcrumbs {
-	margin: theme('spacing.2') 0;
+  margin: theme("spacing.2") 0;
 
-	&-list {
-		display: flex;
-	}
+  &-list {
+    display: flex;
+  }
 
-	&-link {
-		@mixin Link;
-		@mixin Link--primary;
-	}
+  &-link {
+    @mixin Link;
+    @mixin Link--primary;
+  }
 
-	&-link,
-	&-separator {
-		margin: 0 theme('spacing.1');
-	}
+  &-link,
+  &-separator {
+    margin: 0 theme("spacing.1");
+  }
 }

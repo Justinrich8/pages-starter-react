@@ -82,21 +82,28 @@ export const getPath = (data: Data) => {
 const City: React.FC<Data> = (props) => {
   const { document } = props;
   const { streamOutput } = document;
-  const {dm_directoryChildrenCount, dm_directoryChildren, name} = streamOutput;
+  const { dm_directoryChildrenCount, dm_directoryChildren, name } =
+    streamOutput;
   console.log("doc: ", document);
-  return <ProfileProvider value={streamOutput} >
-        <CommonLayout 
+  return (
+    <ProfileProvider value={streamOutput}>
+      <CommonLayout
         streamOutput={streamOutput}
         content={
           <div className="container my-8">
-            <H1 className="mb-6">{dm_directoryChildrenCount} locations in {name}</H1>
+            <H1 className="mb-6">
+              {dm_directoryChildrenCount} locations in {name}
+            </H1>
             <div className="grid grid-cols-3 gap-6">
-              {dm_directoryChildren.map((child: any, idx: number) => <LocationCard key={idx} profile={child}/>)}
+              {dm_directoryChildren.map((child: any, idx: number) => (
+                <LocationCard key={idx} profile={child} />
+              ))}
             </div>
           </div>
         }
       />
     </ProfileProvider>
+  );
 };
 
 /**

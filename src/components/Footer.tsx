@@ -1,19 +1,22 @@
-<<<<<<< HEAD
-import * as React from "react";
-=======
 import { Link } from "@yext/sites-react-components";
 import { CTA } from "@yext/types";
 import React from "react";
-import { FaFacebook, FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
 
 interface FooterProps {
-  instagram: URL
-  youtube: URL
-  linkedIn: URL
-  twitter: URL
-  facebook: URL
-  links1: CTA[]
-  links2: CTA[]
+  instagram: URL;
+  youtube: URL;
+  linkedIn: URL;
+  twitter: URL;
+  facebook: URL;
+  links1: CTA[];
+  links2: CTA[];
 }
 
 function currentYear() {
@@ -28,24 +31,43 @@ const Footer = (props: FooterProps) => {
     {link: props.instagram, label: <FaInstagram size={28} color="white" />},
     {link: props.linkedIn, label: <FaLinkedinIn size={28} color="white" />},
   ].filter(x => x.link)
->>>>>>> 5ff9812 (feat: add page sections)
 
   return (
     <footer className="text-sm sm:text-xs">
       <div className="bg-brand-blue py-11">
         <div className="container text-white">
           <div className="flex justify-center items-center">
-            {socialLinks.map(link => <Link className="Link p-4" key={link.link} link={link.link}>{link.label}</Link>)}
+            {socialLinks.map((link) => (
+              <Link className="Link p-4" key={link.link} link={link.link}>
+                {link.label}
+              </Link>
+            ))}
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center">
-            {props.links1.map(link => <Link className="Link py-4 sm:px-4" key={link.link} link={link.link}>{link.label}</Link>)}
+            {props.links1.map((link) => (
+              <Link
+                className="Link py-4 sm:px-4"
+                key={link.link}
+                link={link.link}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
       <div className="bg-gray1">
         <div className="container">
           <div className="flex flex-col sm:flex-row items-center justify-center">
-            {props.links2.map(link => <Link className="Link py-4 sm:px-4" key={link.link} link={link.link}>{link.label}</Link>)}
+            {props.links2.map((link) => (
+              <Link
+                className="Link py-4 sm:px-4"
+                key={link.link}
+                link={link.link}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

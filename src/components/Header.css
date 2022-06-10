@@ -1,17 +1,17 @@
 .Header {
-	&-bottom {
-		height: 45px;
-		margin-bottom: 15px;
-	}
+  &-bottom {
+    height: 45px;
+    margin-bottom: 15px;
+  }
 
-	&-logo {
-		height: 43px;
-		width: 43px;
+  &-logo {
+    height: 43px;
+    width: 43px;
 
-		@screen sm {
-			height: 72px;
-			width: 72px;
-			max-height: none;
-		}
-	}
+    @screen sm {
+      height: 72px;
+      width: 72px;
+      max-height: none;
+    }
+  }
 }

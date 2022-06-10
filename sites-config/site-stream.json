@@ -1,25 +1,23 @@
 {
-	"filter" : {
-			"entityIds": [
-					"7705539864931086630"
-			]
-	},
-	"fields": [
-			"id", 
-			"meta",
-			"name",
-			"c_header",
-			"c_headerTopRow",
-			"c_facebook",
-			"c_instagram",
-			"c_youtube",
-			"c_linkedIn",
-			"c_twitter",
-			"c_footerLinks1",
-			"c_footerLinks2"
-	 ],
-	 "localization": {
-		"locales": ["en"],
-		"primary": false
-	}
+  "filter": {
+    "entityIds": ["7705539864931086630"]
+  },
+  "fields": [
+    "id",
+    "meta",
+    "name",
+    "c_header",
+    "c_headerTopRow",
+    "c_facebook",
+    "c_instagram",
+    "c_youtube",
+    "c_linkedIn",
+    "c_twitter",
+    "c_footerLinks1",
+    "c_footerLinks2"
+  ],
+  "localization": {
+    "locales": ["en"],
+    "primary": false
+  }
 }
