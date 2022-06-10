@@ -13,8 +13,6 @@ export interface FAQsProps {
 }
 
 export function FAQs(props: FAQsProps) {
-  // TODO(bhaines): doesn't run on initial render, use something else
-  // https://github.com/kodingdotninja/use-tailwind-breakpoint/issues/2
   const isDesktop = useBreakpoint('sm');
 
   const {faqs = []} = props;

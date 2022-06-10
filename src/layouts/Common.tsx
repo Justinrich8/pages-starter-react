@@ -11,7 +11,6 @@ interface LayoutProps {
 
 export default function CommonLayout(props: LayoutProps) {
 	const { _site } = props.streamOutput;
-	console.log("output: ", props.streamOutput)
 
 	return (
 		<>
