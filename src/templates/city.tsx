@@ -9,29 +9,19 @@
  */
 
 import * as React from "react";
-import { reactWrapper } from "../wrapper";
-import { renderToString } from "react-dom/server";
 import { Data, ProfileProvider } from "../types/data";
 import CommonLayout from "../layouts/Common";
 import { H1 } from "../components/Heading";
 import LocationCard from "../components/cards/LocationCard";
+import { GetPath, TemplateConfig } from "@yext/yext-sites-scripts";
 import "../index.css";
-import { Breadcrumbs } from "@yext/sites-react-components";
 
 /**
  * Required when Knowledge Graph data is used for a template.
  */
-export const config = {
-  // The name of the feature.
-  // NOTE: A future change may remove this and the feature name would use the name of the template by default.
-  name: "city",
-  streamId: "city",
+export const config: TemplateConfig = {
   stream: {
     $id: "city",
-    // Required for now, but the plugin could set this automatically for you.
-    source: "knowledgeGraph",
-    // Required for now, but the plugin could set this automatically for you.
-    destination: "pages",
     // Specifies the exact data that each generated document will contain. This data is passed in
     // directly as props to the default exported function.
     fields: [
@@ -66,7 +56,7 @@ export const config = {
  * NOTE: This currently has no impact on the local dev path. Local dev urls currently
  * take on the form: featureName/entityId
  */
-export const getPath = (data: Data) => {
+export const getPath: GetPath<Data> = (data: Data) => {
   return data.document.streamOutput.slug;
 };
 
@@ -105,16 +95,5 @@ const City: React.FC<Data> = (props) => {
     </ProfileProvider>
   );
 };
-
-/**
- * Defines how the plugin will render the template for the production build. This has no
- * impact on local dev.
- *
- * A convenient function is currently defined in src/wrapper.ts.
- *
- * NOTE: Future changes may impact how this is used.
- */
-export const render = (data: Data) =>
-  reactWrapper(data, "city.tsx", renderToString(<City {...data} />), true);
 
 export default City;

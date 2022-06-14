@@ -3,6 +3,7 @@
  */
 
 import * as React from "react";
+import CommonLayout from "../layouts/Common";
 import { useState } from "react";
 import fetch from "fetch-everywhere";
 import { Pokemon } from "pokenode-ts";

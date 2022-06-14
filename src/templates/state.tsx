@@ -9,27 +9,18 @@
  */
 
 import * as React from "react";
-import { reactWrapper } from "../wrapper";
-import { renderToString } from "react-dom/server";
 import { Data, ProfileProvider } from "../types/data";
 import CommonLayout from "../layouts/Common";
 import BasicDirectory from "../components/BasicDirectory";
+import { GetPath, TemplateConfig } from "@yext/yext-sites-scripts";
 import "../index.css";
 
 /**
  * Required when Knowledge Graph data is used for a template.
  */
-export const config = {
-  // The name of the feature.
-  // NOTE: A future change may remove this and the feature name would use the name of the template by default.
-  name: "state",
-  streamId: "state",
+export const config: TemplateConfig = {
   stream: {
     $id: "state",
-    // Required for now, but the plugin could set this automatically for you.
-    source: "knowledgeGraph",
-    // Required for now, but the plugin could set this automatically for you.
-    destination: "pages",
     // Specifies the exact data that each generated document will contain. This data is passed in
     // directly as props to the default exported function.
     fields: [
@@ -62,7 +53,7 @@ export const config = {
  * NOTE: This currently has no impact on the local dev path. Local dev urls currently
  * take on the form: featureName/entityId
  */
-export const getPath = (data: Data) => {
+export const getPath: GetPath<Data> = (data: Data) => {
   return data.document.streamOutput.slug;
 };
 
@@ -95,16 +86,5 @@ const State: React.FC<Data> = (props) => {
     </ProfileProvider>
   );
 };
-
-/**
- * Defines how the plugin will render the template for the production build. This has no
- * impact on local dev.
- *
- * A convenient function is currently defined in src/wrapper.ts.
- *
- * NOTE: Future changes may impact how this is used.
- */
-export const render = (data: Data) =>
-  reactWrapper(data, "state.tsx", renderToString(<State {...data} />), true);
 
 export default State;
