@@ -32,13 +32,13 @@ export default function LocationCard(props: { profile: Profile }) {
       </div>
 
       <div className="flex justify-between">
-        <Link
+        {mainPhone && <Link
           className="Button Button--primary"
           link={mainPhone}
           type={"Phone"}
         >
           Call Now
-        </Link>
+        </Link>}
       </div>
     </div>
   );
