@@ -13,6 +13,7 @@ import {
   GetStaticProps,
   TemplateConfig,
 } from "@yext/yext-sites-scripts";
+import { Main } from '../layouts/main';
 
 /**
  * Not required depending on your use case.
@@ -65,11 +66,12 @@ const Static: Default<PokemonData> = (data) => {
   const [num, setNum] = useState<number>(0);
 
   return (
-    <>
+    <Main>
+      <div>Hello {name}!</div>
       <div>Hello from {name}</div>
       <button onClick={() => setNum(num + 1)}>Click me</button>
       Num: {num}
-    </>
+    </Main>
   );
 };
 

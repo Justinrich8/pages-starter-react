@@ -17,6 +17,7 @@ import {
 	GetHeadConfig,
 } from "@yext/yext-sites-scripts";
 import "../index.css";
+import { Main } from '../layouts/main';
 import { defaultHeadConfig } from "../common/head";
 
 /**
@@ -83,7 +84,9 @@ const Root: Default<Data> = (data) => {
 	} = streamOutput;
 
 	return (
-		<div>Hello {name}!</div>
+		<Main>
+      <div>Hello {name}!</div>
+    </Main>
 	);
 };
 

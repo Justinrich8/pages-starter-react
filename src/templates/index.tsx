@@ -18,6 +18,7 @@ import {
   HeadConfig,
 } from "@yext/yext-sites-scripts";
 import "../index.css";
+import { Main } from '../layouts/main';
 import { defaultHeadConfig } from "../common/head";
 
 /**
@@ -92,7 +93,9 @@ const Index: Default<TemplateProps> = (data) => {
   } = document;
 
   return (
-    <div>Hello {name}!</div>
+    <Main>
+      <div>Hello {name}!</div>
+    </Main>
   );
 };
 
