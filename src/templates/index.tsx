@@ -18,7 +18,11 @@ import {
   HeadConfig,
 } from "@yext/yext-sites-scripts";
 import "../index.css";
+<<<<<<< HEAD
 import { Main } from '../layouts/main';
+=======
+import { CustomFieldDebuggerReactProvider } from '@yext/custom-field-debugger';
+>>>>>>> 6a1bb5b (Add custom field debugger (#6))
 import { defaultHeadConfig } from "../common/head";
 
 /**
