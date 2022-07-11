@@ -6,10 +6,14 @@ import {
 } from "@yext/yext-sites-scripts";
 import config from '../config';
 
-const Main: FC<TemplateProps> = (props) => {
+interface MainProps extends TemplateProps {
+  component: React.FC<TemplateProps>;
+}
+
+const Main: FC<MainProps> = (props) => {
   return (
     <YextProvider value={config}>
-      <CustomFieldDebuggerReactProvider component={Main} {...props}>
+      <CustomFieldDebuggerReactProvider {...props}>
         {props.children}
       </CustomFieldDebuggerReactProvider>
     </YextProvider>

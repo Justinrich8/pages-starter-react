@@ -96,7 +96,7 @@ const Index: Default<TemplateProps> = (data: TemplateProps) => {
     // <CustomFieldDebuggerReactProvider component={Index} {...data}>
     //   <div>Hello {name}!</div>
     // </CustomFieldDebuggerReactProvider>
-    <Main {...data}>
+    <Main {...data} component={Index}>
       <div>Hello {name}!</div>
     </Main>
   );
