@@ -1,17 +1,17 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { YextProvider } from '@yext/sites-react-components';
+import { CustomFieldDebuggerReactProvider } from '@yext/custom-field-debugger';
+import {
+  TemplateProps,
+} from "@yext/yext-sites-scripts";
 import config from '../config';
 
-interface MainProps {
-  children?: React.ReactNode;
-};
-
-const Main = (props: MainProps) => {
-  const { children } = props;
-
+const Main: FC<TemplateProps> = (props) => {
   return (
     <YextProvider value={config}>
-      {children}
+      <CustomFieldDebuggerReactProvider component={Main} {...props}>
+        {props.children}
+      </CustomFieldDebuggerReactProvider>
     </YextProvider>
   )
 }

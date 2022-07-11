@@ -18,11 +18,7 @@ import {
   HeadConfig,
 } from "@yext/yext-sites-scripts";
 import "../index.css";
-<<<<<<< HEAD
 import { Main } from '../layouts/main';
-=======
-import { CustomFieldDebuggerReactProvider } from '@yext/custom-field-debugger';
->>>>>>> 6a1bb5b (Add custom field debugger (#6))
 import { defaultHeadConfig } from "../common/head";
 
 /**
@@ -90,14 +86,17 @@ export const getHeadConfig: GetHeadConfig<TemplateProps> = (data: TemplateProps)
  * components any way you'd like as long as it lives in the src folder (though you should not put
  * them in the src/templates folder as this is specific for true template files).
  */
-const Index: Default<TemplateProps> = (data) => {
+const Index: Default<TemplateProps> = (data: TemplateProps) => {
   const { document } = data;
   const {
     name
   } = document;
 
   return (
-    <Main>
+    // <CustomFieldDebuggerReactProvider component={Index} {...data}>
+    //   <div>Hello {name}!</div>
+    // </CustomFieldDebuggerReactProvider>
+    <Main {...data}>
       <div>Hello {name}!</div>
     </Main>
   );
