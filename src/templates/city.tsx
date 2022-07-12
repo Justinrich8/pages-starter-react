@@ -40,7 +40,7 @@ export const config: TemplateConfig = {
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
-      entityTypes: ["ce_City"],
+      entityTypes: ["ce_city"],
     },
     // The entity language profiles that documents will be generated for.
     localization: {
