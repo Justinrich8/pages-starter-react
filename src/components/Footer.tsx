@@ -38,7 +38,7 @@ const Footer = (props: FooterProps) => {
         <div className="container text-white">
           <div className="flex justify-center items-center">
             {socialLinks.map((link) => (
-              <Link className="Link p-4" key={link.link} link={link.link}>
+              <Link className="Link p-4" key={link.link} link={link}>
                 {link.label}
               </Link>
             ))}
@@ -48,7 +48,7 @@ const Footer = (props: FooterProps) => {
               <Link
                 className="Link py-4 sm:px-4"
                 key={link.link}
-                link={link.link}
+                link={link}
               >
                 {link.label}
               </Link>
@@ -63,7 +63,7 @@ const Footer = (props: FooterProps) => {
               <Link
                 className="Link py-4 sm:px-4"
                 key={link.link}
-                link={link.link}
+                link={link}
               >
                 {link.label}
               </Link>

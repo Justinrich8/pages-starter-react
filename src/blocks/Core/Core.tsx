@@ -36,7 +36,7 @@ export function Core(props: CoreProps) {
           {cta && (
             <Link
               className="Button Button--primary Button--loose"
-              link={cta.link}
+              link={cta}
             >
               {cta.label}
             </Link>
@@ -52,13 +52,15 @@ export function Core(props: CoreProps) {
           </div>
 
           <div className="mb-4">
-            <Link link={phone} linkType={"Phone"} />
+            <Link link={{link: phone, label: '', linkType: "Phone"}}>
+              {phone}
+            </Link>
           </div>
           <div>
             {/* TODO(bhaines): use getDirections component */}
             <Link
               className="Link Link--primary Link--arrow"
-              link="https://www.yext.com"
+              href="https://www.yext.com"
             >
               Get Directions
             </Link>

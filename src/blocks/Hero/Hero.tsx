@@ -49,8 +49,7 @@ export function Hero(props: HeroProps) {
             {props.cTA1 && (
               <Link
                 className="Button Button--primary mb-4 sm:mb-0"
-                link={props.cTA1.link}
-                type={props.cTA1.linkType}
+                link={props.cTA1}
               >
                 {props.cTA1.label}
               </Link>
@@ -59,8 +58,7 @@ export function Hero(props: HeroProps) {
             {props.cTA2 && (
               <Link
                 className="Button Button--secondary"
-                link={props.cTA2.link}
-                type={props.cTA2.linkType}
+                link={props.cTA2}
               >
                 {props.cTA2.label}
               </Link>

@@ -117,7 +117,7 @@ const Index: Default<Data> = (props) => {
             <BasicCore />
             <Map />
             <FAQs />
-            <Nearby />
+            {/* <Nearby /> */}
           </>
         }
       />
