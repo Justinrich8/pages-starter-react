@@ -9,11 +9,11 @@
  */
 
 import * as React from "react";
-import { Data, ProfileProvider } from "../types/data";
+import { Profile, ProfileProvider } from "../types/data";
 import CommonLayout from "../layouts/Common";
 import { H1 } from "../components/Heading";
 import LocationCard from "../components/cards/LocationCard";
-import { GetPath, TemplateConfig } from "@yext/yext-sites-scripts";
+import { GetPath, TemplateConfig, TemplateProps } from "@yext/yext-sites-scripts";
 import "../index.css";
 
 /**
@@ -56,8 +56,8 @@ export const config: TemplateConfig = {
  * NOTE: This currently has no impact on the local dev path. Local dev urls currently
  * take on the form: featureName/entityId
  */
-export const getPath: GetPath<Data> = (data: Data) => {
-  return data.document.streamOutput.slug;
+export const getPath: GetPath<TemplateProps> = (data: TemplateProps) => {
+  return data.document.slug;
 };
 
 /**
@@ -69,16 +69,13 @@ export const getPath: GetPath<Data> = (data: Data) => {
  * components any way you'd like as long as it lives in the src folder (though you should not put
  * them in the src/templates folder as this is specific for true template files).
  */
-const City: React.FC<Data> = (props) => {
+const City: React.FC<TemplateProps> = (props) => {
   const { document } = props;
-  const { streamOutput } = document;
-  const { dm_directoryChildrenCount, dm_directoryChildren, name } =
-    streamOutput;
-  console.log("doc: ", document);
+  const { dm_directoryChildrenCount, dm_directoryChildren, name } = document;
   return (
-    <ProfileProvider value={streamOutput}>
+    <ProfileProvider value={document as Profile}>
       <CommonLayout
-        streamOutput={streamOutput}
+        document={document}
         content={
           <div className="container my-8">
             <H1 className="mb-6">

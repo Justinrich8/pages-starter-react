@@ -8,7 +8,7 @@ import { useState } from "react";
 import fetch from "fetch-everywhere";
 import { Pokemon } from "pokenode-ts";
 import {
-  Data,
+  TemplateProps,
   Default,
   GetPath,
   GetStaticProps,
@@ -30,7 +30,7 @@ export const config: TemplateConfig = {
  * NOTE: This currently has no impact on the local dev path. Local dev urls currently
  * take on the form: featureName/entityId
  */
-export const getPath: GetPath<Data> = () => {
+export const getPath: GetPath<TemplateProps> = () => {
   return `static/${Math.random().toString()}`;
 };
 
@@ -38,7 +38,7 @@ export const getPath: GetPath<Data> = () => {
  * A local type for getStaticProps. This could live in src/types but it's generally
  * best practice to keep unshared types local to their usage.
  */
-type PokemonData = Data & { pokemon: Pokemon };
+type PokemonData = TemplateProps & { pokemon: Pokemon };
 
 /**
  * Required only when data needs to be retrieved from an external (non-Knowledge Graph) source.
@@ -62,14 +62,16 @@ export const getStaticProps: GetStaticProps<PokemonData> = async (data) => {
  */
 const Static: Default<PokemonData> = (data) => {
   const { name } = data.pokemon;
+  const { _site } = data.document;
 
   const [num, setNum] = useState<number>(0);
+  console.log("data: ", data);
 
   return (
     <CommonLayout
       // TODO(bhaines): we're missing _site data on static pages so this doesn't work
       // https://yext.slack.com/archives/C02LLE9BW2K/p1653582254686619
-      streamOutput={{
+      document={{
         _site: {
           c_header: [],
           c_headerTopRow: [],

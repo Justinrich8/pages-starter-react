@@ -1,11 +1,6 @@
 import React, { createContext, useContext } from "react";
 import { Image, Coordinate, Address, Hours, CTA } from "@yext/types";
 
-export type Data = {
-  document: { streamOutput: any };
-  __meta: {};
-};
-
 export type Card<P> = (props: { profile: P }) => React.Element | null;
 
 interface Hero {

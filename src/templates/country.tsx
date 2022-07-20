@@ -9,11 +9,12 @@
  */
 
 import * as React from "react";
-import { Data, ProfileProvider } from "../types/data";
+import { Data, Profile, ProfileProvider } from "../types/data";
 import CommonLayout from "../layouts/Common";
 import BasicDirectory from "../components/BasicDirectory";
-import { GetPath, TemplateConfig } from "@yext/yext-sites-scripts";
+import { GetPath, TemplateConfig, TemplateProps } from "@yext/yext-sites-scripts";
 import "../index.css";
+import Divider from "../components/Divider";
 
 /**
  * Required when Knowledge Graph data is used for a template.
@@ -51,7 +52,7 @@ export const config: TemplateConfig = {
  * NOTE: This currently has no impact on the local dev path. Local dev urls currently
  * take on the form: featureName/entityId
  */
-export const getPath: GetPath<Data> = (data: Data) => {
+export const getPath: GetPath<TemplateProps> = (data: TemplateProps) => {
   return data.document.streamOutput.slug;
 };
 
@@ -64,14 +65,13 @@ export const getPath: GetPath<Data> = (data: Data) => {
  * components any way you'd like as long as it lives in the src folder (though you should not put
  * them in the src/templates folder as this is specific for true template files).
  */
-const Country: React.FC<Data> = (props) => {
+const Country: React.FC<TemplateProps> = (props) => {
   const { document } = props;
-  const { streamOutput } = document;
-  const { dm_directoryChildrenCount, dm_directoryChildren } = streamOutput;
+  const { dm_directoryChildrenCount, dm_directoryChildren } = document;
   return (
-    <ProfileProvider value={streamOutput}>
+    <ProfileProvider value={document as Profile}>
       <CommonLayout
-        streamOutput={streamOutput}
+        document={document}
         content={
           <BasicDirectory
             count={dm_directoryChildrenCount}

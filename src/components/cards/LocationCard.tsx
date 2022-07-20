@@ -3,6 +3,7 @@ import { Link } from "@yext/sites-react-components";
 import { Profile } from "../../types/data";
 import { H3 } from "../Heading";
 import "./LocationCard.css";
+import { FaLinkedin } from "react-icons/fa";
 
 export default function LocationCard(props: { profile: Profile }) {
   const { name, address, mainPhone, slug } = props.profile;
@@ -10,7 +11,7 @@ export default function LocationCard(props: { profile: Profile }) {
     <div className="LocationCard u-dropShadowActive bg-white px-6 py-8 border border-brand-blue">
       <H3 className="mb-4">
         {slug ? (
-          <Link className="Link" link={slug} linkType={"URL"}>
+          <Link className="Link" href={slug} linkType={"URL"}>
             {name}
           </Link>
         ) : (
@@ -32,13 +33,7 @@ export default function LocationCard(props: { profile: Profile }) {
       </div>
 
       <div className="flex justify-between">
-        {mainPhone && <Link
-          className="Button Button--primary"
-          link={mainPhone}
-          type={"Phone"}
-        >
-          Call Now
-        </Link>}
+        {mainPhone && <Link className="Button Button--primary" link={{link: mainPhone, linkType: "Phone"}}>Call Now</Link>}
       </div>
     </div>
   );

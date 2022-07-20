@@ -5,12 +5,12 @@ import logo from "../assets/images/logo.svg";
 import { Breadcrumbs } from "@yext/sites-react-components";
 
 interface LayoutProps {
-  streamOutput: any; // TODO: fix type
+  document: any; // TODO: fix type
   content: React.ReactElement;
 }
 
 export default function CommonLayout(props: LayoutProps) {
-  const { _site } = props.streamOutput;
+  const { _site } = props.document;
 
   return (
     <>
@@ -20,8 +20,8 @@ export default function CommonLayout(props: LayoutProps) {
         links={_site.c_header}
       />
       <div className="container flex">
-        {props.streamOutput?.dm_directoryParents?.length > 0 && (
-          <Breadcrumbs streamsBreadcrumbs={props.streamOutput} />
+        {props.document?.dm_directoryParents?.length > 0 && (
+          <Breadcrumbs streamsBreadcrumbs={props.document} />
         )}
       </div>
       <div>{props.content}</div>

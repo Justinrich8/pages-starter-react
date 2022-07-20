@@ -1,25 +1,25 @@
 /**
- * This is an example of how to create a template that makes use of streams data.
- * The stream data originates from Yext's Knowledge Graph. When a template in
- * concert with a stream is built by the Yext Sites system, a static html page
- * is generated for every corresponding (based on the filter) stream document.
- *
- * Another way to think about it is that a page will be generated using this
- * template for every eligible entity in your Knowledge Graph.
- */
+* This is an example of how to create a template that makes use of streams data.
+* The stream data originates from Yext's Knowledge Graph. When a template in
+* concert with a stream is built by the Yext Sites system, a static html page
+* is generated for every corresponding (based on the filter) stream document.
+*
+* Another way to think about it is that a page will be generated using this
+* template for every eligible entity in your Knowledge Graph.
+*/
 
- import * as React from "react";
- import { Profile, ProfileProvider } from "../types/data";
- import CommonLayout from "../layouts/Common";
- import { AlertBanner } from "../blocks/Banner/Banner.config";
- import { Hero } from "../blocks/Hero/Hero.config";
- import Divider from "../components/Divider";
- import { BasicCore } from "../blocks/Core/Core.config";
- import { FAQs } from "../blocks/FAQs/FAQs.config";
- import { Nearby } from "../blocks/Nearby/Nearby.config";
- import Map from "../blocks/Map/Map";
-import { Data, GetHeadConfig, GetPath, Default, TemplateConfig } from "@yext/yext-sites-scripts";
- import "../index.css";
+import * as React from "react";
+import { Profile, ProfileProvider } from "../types/data";
+import CommonLayout from "../layouts/Common";
+import { AlertBanner } from "../blocks/Banner/Banner.config";
+import { Hero } from "../blocks/Hero/Hero.config";
+import Divider from "../components/Divider";
+import { BasicCore } from "../blocks/Core/Core.config";
+import { FAQs } from "../blocks/FAQs/FAQs.config";
+import { Nearby } from "../blocks/Nearby/Nearby.config";
+import Map from "../blocks/Map/Map";
+import { TemplateProps, GetHeadConfig, GetPath, Default, TemplateConfig } from "@yext/yext-sites-scripts";
+import "../index.css";
  
  /**
   * Required when Knowledge Graph data is used for a template.
@@ -67,8 +67,8 @@ import { Data, GetHeadConfig, GetPath, Default, TemplateConfig } from "@yext/yex
   * NOTE: This currently has no impact on the local dev path. Local dev urls currently
   * take on the form: featureName/entityId
   */
- export const getPath: GetPath<Data> = (data: Data) => {
-   return data.document.streamOutput.slug;
+ export const getPath: GetPath<TemplateProps> = (data: TemplateProps) => {
+   return data.document.slug;
  };
 
  /**
@@ -77,9 +77,9 @@ import { Data, GetHeadConfig, GetPath, Default, TemplateConfig } from "@yext/yex
  * will be used to generate the inner contents of the HTML document's <head> tag.
  * This can include the title, meta tags, script tags, etc.
  */
-export const getHeadConfig: GetHeadConfig<Data> = (data) => {
+export const getHeadConfig: GetHeadConfig<TemplateProps> = (data) => {
   return {
-    title: data.document.streamOutput.name,
+    title: data.document.name,
     charset: "UTF-8",
     viewport: "width=device-width, initial-scale=1",
     tags: [
@@ -102,13 +102,12 @@ export const getHeadConfig: GetHeadConfig<Data> = (data) => {
 * components any way you'd like as long as it lives in the src folder (though you should not put
 * them in the src/templates folder as this is specific for true template files).
 */
-const Index: Default<Data> = (props) => {
+const Index: Default<TemplateProps> = (props) => {
   const { document } = props;
-  const { streamOutput } = document;
   return (
-    <ProfileProvider value={streamOutput as Profile}>
+    <ProfileProvider value={document as Profile}>
       <CommonLayout
-        streamOutput={streamOutput}
+        document={document}
         content={
           <>
             <AlertBanner />

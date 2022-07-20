@@ -21,10 +21,10 @@ export default function BasicDirectory(props: DirectoryProps) {
           <Link
             className="Link m-6"
             key={idx}
-            link={child.slug}
+            href={child.slug}
             linkType={"URL"}
           >
-            {child.name}
+            {child.slug}
           </Link>
         ))}
       </div>

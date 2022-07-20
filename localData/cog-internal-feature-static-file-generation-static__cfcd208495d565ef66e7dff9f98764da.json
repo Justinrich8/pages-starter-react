@@ -1,17 +1,144 @@
 {
-  "__": {
-    "name": "static",
-    "staticPage": {
-      "plugin": {}
-    },
-    "streamId": "",
-    "templateType": "JS"
-  },
-  "businessId": 0,
-  "key": "0:static:knowledgeGraph:0:en",
-  "locale": "en",
-  "meta": {
-    "locale": "en"
-  },
-  "siteId": 0
+	"__": {
+		"name": "static",
+		"staticPage": {
+			"plugin": {}
+		},
+		"templateType": "JS"
+	},
+	"_site": {
+		"c_facebook": "https://www.facebook.com/EssilorUSA/",
+		"c_footerLinks1": [
+			{
+				"label": "OUR COMPANY",
+				"link": "https://www.essilorusa.com/about",
+				"linkType": "URL"
+			},
+			{
+				"label": "CAREERS",
+				"link": "https://www.essilorusa.com/careers",
+				"linkType": "URL"
+			},
+			{
+				"label": "NEWSROOM",
+				"link": "https://www.essilorusa.com/newsroom",
+				"linkType": "URL"
+			},
+			{
+				"label": "ESSILOR GROUP",
+				"link": "https://www.essilorusa.com/about/essilor-group",
+				"linkType": "URL"
+			},
+			{
+				"label": "FOR EYECARE PROFESSIONALS",
+				"link": "https://www.essilorusa.com/eye-care-professionals",
+				"linkType": "URL"
+			},
+			{
+				"label": "REGISTER YOUR LENSES",
+				"link": "https://www.essilorusa.com/get-lenses/lens-registration-coa",
+				"linkType": "URL"
+			},
+			{
+				"label": "FAQ",
+				"link": "https://www.essilorusa.com/products/faq",
+				"linkType": "URL"
+			},
+			{
+				"label": "CONTACT US",
+				"link": "https://www.essilorusa.com/contact-us",
+				"linkType": "URL"
+			}
+		],
+		"c_footerLinks2": [
+			{
+				"label": "SITE MAP",
+				"link": "https://www.essilorusa.com/sitemap",
+				"linkType": "URL"
+			},
+			{
+				"label": "TERMS OF USE",
+				"link": "https://www.essilorusa.com/terms-and-conditions",
+				"linkType": "URL"
+			},
+			{
+				"label": "DO NOT SELL MY PERSONAL INFO",
+				"link": "https://www.essilorusa.com/privacy-policy#opt-out",
+				"linkType": "URL"
+			},
+			{
+				"label": "PRIVACY POLICY",
+				"link": "https://www.essilorusa.com/privacy-policy",
+				"linkType": "URL"
+			},
+			{
+				"label": "ETHICS \u0026 COMPLIANCE",
+				"link": "https://www.essilorusa.com/about/ethics-compliance",
+				"linkType": "URL"
+			}
+		],
+		"c_header": [
+			{
+				"label": "OUR PRODUCTS",
+				"link": "https://www.yext.com",
+				"linkType": "URL"
+			},
+			{
+				"label": "HELP ME CHOOSE",
+				"link": "https://www.yext.com",
+				"linkType": "OTHER"
+			},
+			{
+				"label": "LENS INNOVATION",
+				"link": "https://www.yext.com",
+				"linkType": "OTHER"
+			},
+			{
+				"label": "YOUR VISION",
+				"link": "https://www.yext.com",
+				"linkType": "OTHER"
+			},
+			{
+				"label": "GET LENSES",
+				"link": "https://www.yext.com",
+				"linkType": "OTHER"
+			}
+		],
+		"c_headerTopRow": [
+			{
+				"label": "Find an Eyecare Professional",
+				"link": "https://www.yext.com",
+				"linkType": "URL"
+			},
+			{
+				"label": "Register Your Lenses",
+				"link": "https://www.yext.com",
+				"linkType": "OTHER"
+			}
+		],
+		"c_instagram": "https://www.instagram.com/essilorusa/",
+		"c_linkedIn": "https://www.linkedin.com/showcase/essilor-america/",
+		"c_twitter": "https://twitter.com/essilorusa",
+		"c_youtube": "https://www.youtube.com/user/EssilorUSA1",
+		"id": "7705539864931086630",
+		"meta": {
+			"entityType": {
+				"id": "ce_site",
+				"uid": 90179
+			},
+			"locale": "en",
+			"updateTimestamp": "2022-06-15T19:01:31Z"
+		},
+		"name": "Site Entity",
+		"uid": 23139446
+	},
+	"businessId": 0,
+	"key": "0:static:knowledgeGraph:0:en",
+	"locale": "en",
+	"meta": {
+		"locale": "en"
+	},
+	"siteDomain": "",
+	"siteId": 0,
+	"siteInternalHostName": ""
 }
