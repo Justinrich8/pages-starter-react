@@ -60,30 +60,16 @@ export const getStaticProps: GetStaticProps<PokemonData> = async (data) => {
  * This is the main template. It can have any name as long as it's the default export.
  * The props passed in here are the direct result from `getStaticProps`.
  */
-const Static: Default<PokemonData> = (data) => {
-  const { name } = data.pokemon;
-  const { _site } = data.document;
+const Static: Default<TemplateProps> = (data) => {
+  const { name } = data.document;
 
   const [num, setNum] = useState<number>(0);
-  console.log("data: ", data);
 
   return (
     <CommonLayout
       // TODO(bhaines): we're missing _site data on static pages so this doesn't work
       // https://yext.slack.com/archives/C02LLE9BW2K/p1653582254686619
-      document={{
-        _site: {
-          c_header: [],
-          c_headerTopRow: [],
-          c_facebook: "",
-          c_instagram: "",
-          c_youtube: "",
-          c_linkedIn: "",
-          c_twitter: "",
-          c_footerLinks1: [],
-          c_footerLinks2: [],
-        },
-      }}
+      document={data.document}
       content={
         <>
           <div>Hello from {name}</div>
