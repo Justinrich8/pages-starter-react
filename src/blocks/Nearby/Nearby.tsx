@@ -39,7 +39,7 @@ export function Nearby(props: NearbyProps) {
     <div className="Nearby container">
       <div className="flex justify-between">
         <H2>{props.heading}</H2>
-        <Link className="Button Button--primary" link="https://www.yext.com">
+        <Link className="Button Button--primary" href="https://www.yext.com">
           Find a Location
         </Link>
       </div>

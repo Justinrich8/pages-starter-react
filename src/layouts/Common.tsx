@@ -20,9 +20,10 @@ export default function CommonLayout(props: LayoutProps) {
         links={_site.c_header}
       />
       <div className="container flex">
-        {props.document?.dm_directoryParents?.length > 0 && (
+        {/* TODO: breadcrumbs component broken by Link update */}
+        {/* {props.document?.dm_directoryParents?.length > 0 && (
           <Breadcrumbs streamsBreadcrumbs={props.document} />
-        )}
+        )} */}
       </div>
       <div>{props.content}</div>
       <Footer

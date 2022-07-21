@@ -38,9 +38,7 @@ const Footer = (props: FooterProps) => {
         <div className="container text-white">
           <div className="flex justify-center items-center">
             {socialLinks.map((link) => (
-              <Link className="Link p-4" key={link.link} link={link}>
-                {link.label}
-              </Link>
+              <Link className="Link p-4" key={link.link} cta={link} />
             ))}
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center">
@@ -48,10 +46,8 @@ const Footer = (props: FooterProps) => {
               <Link
                 className="Link py-4 sm:px-4"
                 key={link.link}
-                link={link}
-              >
-                {link.label}
-              </Link>
+                cta={link}
+              />
             ))}
           </div>
         </div>
@@ -63,10 +59,8 @@ const Footer = (props: FooterProps) => {
               <Link
                 className="Link py-4 sm:px-4"
                 key={link.link}
-                link={link}
-              >
-                {link.label}
-              </Link>
+                cta={link}
+              />
             ))}
           </div>
         </div>

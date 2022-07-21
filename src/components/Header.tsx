@@ -39,9 +39,7 @@ const Header = (props: HeaderProps) => {
   function renderLinks(links: CTA[]) {
     return links.map((link) => (
       <div key={link.label}>
-        <Link className="Link px-4 uppercase" target="_blank" link={link}>
-          {link.label}
-        </Link>
+        <Link className="Link px-4 uppercase" target="_blank" cta={link} />
       </div>
     ));
   }

@@ -116,7 +116,7 @@ const Index: Default<TemplateProps> = (props) => {
             <BasicCore />
             <Map />
             <FAQs />
-            {/* <Nearby /> */}
+            <Nearby />
           </>
         }
       />
