@@ -729,10 +729,10 @@
     "@yext/components-tsx-geo" "^1.0.3"
     typescript "^4.7.3"
 
-"@yext/sites-react-components@0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@yext/sites-react-components/-/sites-react-components-0.1.4.tgz#29f04fd56b25904f5225ba5b681fe2bdcd43cc8f"
-  integrity sha512-ArkEtqJmCOFCzMmXW9TtuQhzi5JhJv1e6p70xpvWqd4rf/dg1UvjenaqKLu7ae7WBu05N7MLhcujOed5vlSY4Q==
+"@yext/sites-react-components@0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@yext/sites-react-components/-/sites-react-components-0.1.5.tgz#a33a3ab1154fef899758842f69abaa9dddaa4169"
+  integrity sha512-5r3vl3iEulniKQASno+WQv2xJnlCdT74EJYUoEO+imfEIn+JGW+1uR1BYLnY+KpYkfmZztitD95kLGElWsH2Yg==
   dependencies:
     "@yext/components-tsx-maps" "^1.0.5"
     awesome-phonenumber "^2.70.0"

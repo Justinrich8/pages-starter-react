@@ -14,7 +14,7 @@
     "node": ">=17"
   },
   "dependencies": {
-    "@yext/sites-react-components": "0.1.4",
+    "@yext/sites-react-components": "0.1.5",
     "@yext/types": "^0.1.4-alpha",
     "@yext/yext-sites-scripts": "0.0.23",
     "classnames": "^2.3.1",
