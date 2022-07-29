@@ -1,6 +1,7 @@
 import { Link } from "@yext/sites-react-components";
 import React, { useEffect, useState } from "react";
 import { H2 } from "../../components/Heading";
+import { LOCATIONS_SAVED_FILTER } from "../../consts";
 import { Card, Profile, useProfile } from "../../types/data";
 
 export interface NearbyProps {
@@ -23,6 +24,7 @@ export function Nearby(props: NearbyProps) {
       radius: props.radius ? String(props.radius) : "50",
       api_key: props.apiKey,
       locale: (props.locale || ["en"]).join(","),
+      savedFilterIds: LOCATIONS_SAVED_FILTER,
       entityTypes: (props.entityTypes || ["location"]).join(","),
       location: `${geocodedCoordinate.latitude},${geocodedCoordinate.longitude}`,
       filter: JSON.stringify({ "meta.id": { "!$eq": `${id}` } }),

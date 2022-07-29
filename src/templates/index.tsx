@@ -20,6 +20,7 @@ import { Nearby } from "../blocks/Nearby/Nearby.config";
 import Map from "../blocks/Map/Map";
 import { TemplateProps, GetHeadConfig, GetPath, Default, TemplateConfig } from "@yext/yext-sites-scripts";
 import "../index.css";
+import { LOCATIONS_SAVED_FILTER } from "../consts";
  
  /**
   * Required when Knowledge Graph data is used for a template.
@@ -51,7 +52,7 @@ import "../index.css";
      ],
      // Defines the scope of entities that qualify for this stream.
      filter: {
-       entityTypes: ["location"],
+       savedFilterIds: [LOCATIONS_SAVED_FILTER],
      },
      // The entity language profiles that documents will be generated for.
      localization: {
