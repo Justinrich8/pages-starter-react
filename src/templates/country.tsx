@@ -9,7 +9,7 @@
  */
 
 import * as React from "react";
-import { Data, Profile, ProfileProvider } from "../types/data";
+import { Profile, ProfileProvider } from "../types/data";
 import CommonLayout from "../layouts/Common";
 import BasicDirectory from "../components/BasicDirectory";
 import { GetPath, TemplateConfig, TemplateProps } from "@yext/yext-sites-scripts";
@@ -53,7 +53,7 @@ export const config: TemplateConfig = {
  * take on the form: featureName/entityId
  */
 export const getPath: GetPath<TemplateProps> = (data: TemplateProps) => {
-  return data.document.streamOutput.slug;
+  return data.document.slug;
 };
 
 /**
