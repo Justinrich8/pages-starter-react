@@ -32,7 +32,7 @@ export default function CommonLayout(props: LayoutProps) {
         youtube={_site.c_youtube}
         linkedIn={_site.c_linkedIn}
         twitter={_site.c_twitter}
-        links1={_site.c_footerLinks1}
+        links1={_site.c_footerLinks}
         links2={_site.c_footerLinks2}
       />
     </>

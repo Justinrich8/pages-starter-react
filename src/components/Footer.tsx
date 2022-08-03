@@ -42,7 +42,7 @@ const Footer = (props: FooterProps) => {
             ))}
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center">
-            {props.links1.map((link) => (
+            {(props.links1 || []).map((link) => (
               <Link
                 className="Link py-4 sm:px-4"
                 key={link.link}
@@ -55,7 +55,7 @@ const Footer = (props: FooterProps) => {
       <div className="bg-gray1">
         <div className="container">
           <div className="flex flex-col sm:flex-row items-center justify-center">
-            {props.links2.map((link) => (
+            {(props.links2 || []).map((link) => (
               <Link
                 className="Link py-4 sm:px-4"
                 key={link.link}
