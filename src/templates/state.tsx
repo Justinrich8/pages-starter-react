@@ -71,7 +71,7 @@ const State: React.FC<TemplateProps> = (props) => {
   const { name, dm_directoryChildrenCount, dm_directoryChildren } =
     document;
   return (
-    <ProfileProvider value={document as Profile}>
+    <ProfileProvider value={document}>
       <CommonLayout
         document={document}
         content={

@@ -106,7 +106,7 @@ export const getHeadConfig: GetHeadConfig<TemplateProps> = (data) => {
 const Index: Default<TemplateProps> = (props) => {
   const { document } = props;
   return (
-    <ProfileProvider value={document as Profile}>
+    <ProfileProvider value={document}>
       <CommonLayout
         document={document}
         content={

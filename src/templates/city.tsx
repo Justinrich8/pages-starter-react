@@ -73,7 +73,7 @@ const City: React.FC<TemplateProps> = (props) => {
   const { document } = props;
   const { dm_directoryChildrenCount, dm_directoryChildren, name } = document;
   return (
-    <ProfileProvider value={document as Profile}>
+    <ProfileProvider value={document}>
       <CommonLayout
         document={document}
         content={

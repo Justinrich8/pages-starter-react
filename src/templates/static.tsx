@@ -67,8 +67,6 @@ const Static: Default<TemplateProps> = (data) => {
 
   return (
     <CommonLayout
-      // TODO(bhaines): we're missing _site data on static pages so this doesn't work
-      // https://yext.slack.com/archives/C02LLE9BW2K/p1653582254686619
       document={data.document}
       content={
         <>

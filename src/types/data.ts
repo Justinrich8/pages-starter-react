@@ -54,9 +54,9 @@ export function createCtx<A extends {} | null>() {
 }
 
 // We still have to specify a type, but no default
-const [useProfileContext, ProfileProvider] = createCtx<Profile>();
+const [useProfileContext, ProfileProvider] = createCtx<Record<string,unknown>>();
 
-function useProfile<T>(fieldSelector: (p: Profile) => T): T {
+function useProfile<T>(fieldSelector: (p: Record<string,unknown>) => T): T {
   const context = useProfileContext();
   return fieldSelector(context);
 }
