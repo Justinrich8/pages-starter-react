@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@yext/custom-field-debugger": "2.0.6",
-    "@yext/pages": "https://github.com/yext/pages/blob/dev/sourcemap/packages/pages/yext-pages-1.0.0-alpha.281.tgz?raw=true",
+    "@yext/pages": "https://github.com/yext/pages/raw/dev/relativePrefixToRoot/packages/pages/yext-pages-1.0.0-alpha.281.tgz",
     "@yext/schema-wrapper": "1.0.1",
     "@yext/search-headless-react": "^2.0.0",
     "@yext/search-ui-react": "1.1.0-beta.335",
