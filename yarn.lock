@@ -2007,9 +2007,9 @@
     "vite" "^3.0.0"
     "vitepress" "1.0.0-alpha.2"
 
-"@yext/pages@https://github.com/yext/pages/raw/dev/relativePrefixToRoot/packages/pages/yext-pages-1.0.0-alpha.281.tgz":
-  "integrity" "sha512-KcFayjyJWp97iBghft9PZLrRsNdO91VVi2+VSKB5kkiTFrxjDuAQYxOeBBsmZuGH/hewrCh0auK8IlBadSPSbw=="
-  "resolved" "https://github.com/yext/pages/raw/dev/relativePrefixToRoot/packages/pages/yext-pages-1.0.0-alpha.281.tgz"
+"@yext/pages@file:../pages/packages/pages/yext-pages-1.0.0-alpha.281.tgz":
+  "integrity" "sha512-mfYor2FsTec9dz4wbce079qy3CvBPq4o2PSrl2EqI5JXDmv1LZ2JO3vS48gtZCSnEGrf4verFvPN6/ZKx+1Mbg=="
+  "resolved" "file:../pages/packages/pages/yext-pages-1.0.0-alpha.281.tgz"
   "version" "1.0.0-alpha.281"
   dependencies:
     "@yext/analytics" "^0.3.0"
